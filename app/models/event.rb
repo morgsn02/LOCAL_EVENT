@@ -10,3 +10,4 @@ class Event < ApplicationRecord
   # - festival
   # - braderie, marché
 end
+
