@@ -1,5 +1,6 @@
 class WishlistsController < ApplicationController
   before_action :set_whishlist, only: [:destroy]
+  before_action :authenticate_user!
 
   def show
   end
