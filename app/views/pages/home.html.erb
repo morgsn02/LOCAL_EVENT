@@ -1,2 +1,20 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+
+
+<div class="container justify-content-center">
+      <h1>LOCAL EVENTS</h1>
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://unsplash.com/photos/people-partying-with-confetti-ZODcBkEohk8);">
+  <div class="container">
+
+    <h1>🌟 Trouver <strong> l'evenment idéal </strong> c'est <strong> facile</strong>🌟</h1>
+    <p>Chercher votre location pour un evenment pour vos enfants !</p>
+      <div class="button d-flex justify-content-center">
+        <%= link_to new_event_path  do %>
+          <button type="button" class="btn btn-primary mx-2">Créé un evenment</button>
+        <% end %>
+        <%= link_to events_path  do %>
+          <button type="button" class="btn btn-primary">List des evenments</button>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
