@@ -7,7 +7,7 @@ class EventsController < ApplicationController
   end
 
   def show
-    #@event = Event.find(params[:id])
+    @event = Event.find(params[:id])
   end
 
   def new
@@ -40,10 +40,14 @@ class EventsController < ApplicationController
     redirect_to events_my_events_path, status: :see_other
   end
 
+  def my_events
+    @events = Event.where(user_id: current_user)
+  end
+
   private
 
   def event_params
-    params.require(:event).permit(:title, :start_day, :end_day, :hour, :address, :city, :cost, :link_event, :content)
+    params.require(:event).permit(:title, :start_day, :end_day, :hour, :address, :city, :cost, :link_event, :content, :photo)
   end
 
   def set_event
