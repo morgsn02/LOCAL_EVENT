@@ -1,6 +1,14 @@
 Rails.application.routes.draw do
   devise_for :users
+
+  resources :events do
+    resources :wishlist, only: [:create, :new]
+  end
+
+  resources :wishlist, only: [:destroy]
+
   root to: "pages#home"
+
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
   resources :events do
     resources :wishlist, only: [:create, :new]
