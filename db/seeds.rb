@@ -7,7 +7,7 @@
 #   ["Action", "Comedy", "Drama", "Horror"].each do |genre_name|
 #     MovieGenre.find_or_create_by!(name: genre_name)
 #   end
-puts "hello"
+
 user1 = User.new(email: "test1@test.com", password: "testtest", first_name: "mohcine", last_name: "chnahim", nickname: "morgsn", favorite: "festival", phone_number: "0600233459")
 user1.save
 
@@ -16,7 +16,7 @@ user2.save
 
 user3 = User.new(email: "test3@test.com", password: "testtest", first_name: "leanne", last_name: "fraser", nickname: "Ljfraser", favorite: "sport", phone_number: "0623780024")
 user3.save
-puts"helloTwo"
+
 
 category1 = Category.new(event_category: "festival")
 category1.save
@@ -186,5 +186,3 @@ Event.create(
   user_id: user3.id,
   category_id: category1.id,
   )
-
-  puts "finish"
