@@ -1,8 +1,25 @@
-.card-container {
-  margin-bottom: 130px;
+h1 {
+  color: #cdd2ea;
+}
+
+@supports (-webkit-background-clip: text) {
+  h1 {
+    background-image: linear-gradient(90deg, #c0cce9, #0924ad);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    font-size: 40px;
+    font-weight: bold;
+
+    }
+  }
+
+.gridcontainer {
+  margin-bottom: auto;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-gap: 16px;
+  grid-gap: 20px;
+  width: 80 vw;
 }
 
 .card-trip {
@@ -12,9 +29,12 @@
 }
 
 .card-trip > img {
-  height: 200px;
+  height:200px;
   width: 100%;
   object-fit: cover;
+}
+h2 {
+  color:#0924ad
 }
 
 .card-trip h2 {
@@ -32,9 +52,9 @@
 
 
 .card-trip .card-trip-infos {
-  padding: 50px;
+  padding: 30px;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
   align-items: flex-start;
   position: relative;
 }
@@ -48,9 +68,9 @@
 
 .heading-date {
   background-color: #35a8c8;
-  border-radius: 50% 20% / 10% 40%;
-  margin: 12px 30px;
-  padding: 10px 40px;
+  border-radius: 40% 20% / 10% 30%;
+  margin: 12px 0;
+  padding: 10px 0;
   text-align: center;
 }
 
@@ -85,15 +105,15 @@
 }
 
 .is-day {
-  font-size: 3rem;
+  font-size: 2rem;
   font-weight: 900;
   font-weight: 900;
   line-height: 1;
 }
 
 .is-time {
-  color: black;
+  color: #0924ad;
     // font-family: "Roboto";
-    font-size: 60px;
-
+    font-size: 30px;
+    font-weight: bold;
 }
