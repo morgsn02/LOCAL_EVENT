@@ -1,17 +1,49 @@
 <div class="container">
-<h1 class="text-center mt-4">Liste des évènements</h1>
+<h1 class="text-center mt-4">Local Events</h1>
 
 <div class="container d-flex flex-column align-items-center">
 
-<div class="mt-4 card-trip">
+<% @events.each do |event| %>
+<%= link_to event_path(event) do %>
+  <div class="mt-4 card-trip">
   <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/greece.jpg" />
   <div class="card-trip-infos">
     <div>
       <h2 class="text-center">Title here</h2>
-      <p>Short description here!</p>
+        <%# <p>Short description here!</p> %>
+          <div class="heading-date">
+            <div class="date">
+              <p class="date-wrap">
+                <span class="ghost">Du</span>
+                  <time class="date-time" datetime="2024-06-15">
+                    <span class="date-item is-day">15</span>
+                    <span class="date-item is-month">juin</span>
+                  </time>
+                <span class="ghost">Au</span>
+              <span class="date-icon" aria-hidden="true"></span>
+            <time class="date-time" datetime="2024-08-31">
+          <span class="date-item is-day">31</span>
+        <span class="date-item is-month">août</span>
+      </time>
+        </p>
     </div>
   </div>
-</div>
+  <div class="heading-time-place">
+  <div class="time-place is-center">
+  <p class="time-place-item is-time">
+  <span class="far fa-clock" aria-hidden="true" title="Horaires ">
+  </span>
+    <span class="ghost">A partir de</span>
+    <time datetime="09:30">
+            09h30
+        </time>
+        </p>
+          <p class="time-place-item is-time">
+          <span class="far fa-map-marker-alt" aria-hidden="true" title="Ville"></span>
+          <span class="ghost">Ville :</span> Juan-les-Pins</p>
+            </div>
+              </div>
+                </div>
 
 
 </div>

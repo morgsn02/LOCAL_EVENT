@@ -7,10 +7,9 @@
 
 .card-trip {
   overflow: hidden;
-  background: white;
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  background: rgb(231, 224, 224);
+  box-shadow: 0 0 20px rgba(0,0,0,0.2);
 }
-
 
 .card-trip > img {
   height: 200px;
@@ -20,9 +19,9 @@
 
 .card-trip h2 {
   text-align: center;
-  font-size: 16px;
+  font-size: 20px;
   font-weight: bold;
-  margin: 0;
+  margin: 50;
 }
 
 .card-trip p {
@@ -33,10 +32,10 @@
 
 
 .card-trip .card-trip-infos {
-  padding: 40px;
+  padding: 50px;
   display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
+  justify-content: space-evenly;
+  align-items: flex-start;
   position: relative;
 }
 
@@ -45,4 +44,56 @@
   right: 16px;
   top: -20px;
   width: 40px;
+}
+
+.heading-date {
+  background-color: #35a8c8;
+  border-radius: 50% 20% / 10% 40%;
+  margin: 12px 30px;
+  padding: 10px 40px;
+  text-align: center;
+}
+
+.date {
+  padding: 16px 20px;
+  color: white;
+}
+
+.date-wrap {
+  display: flex;
+  justify-content: center;
+  margin: 0;
+}
+
+.date-time {
+  padding: 0 20px;
+  text-align: center;
+}
+
+.date-item {
+  display: block;
+  text-transform: uppercase;
+}
+
+.is-month{
+  font-size: 1.2rem;
+  font-weight: 400;
+  font-weight: 400;
+  color: #122674;
+  color: #122674;
+  line-height: 1;
+}
+
+.is-day {
+  font-size: 3rem;
+  font-weight: 900;
+  font-weight: 900;
+  line-height: 1;
+}
+
+.is-time {
+  color: black;
+    // font-family: "Roboto";
+    font-size: 60px;
+
 }
