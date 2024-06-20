@@ -27,17 +27,23 @@ h1 {
   width: 80 vw;
 }
 
-.card-trip {
-  overflow: hidden;
-  background: rgb(80, 79, 79);
-  box-shadow: 0 0 20px rgba(0,0,0,0.2);
-}
+// .card-trip {
+//   overflow: hidden;
+//   background: rgb(80, 79, 79);
+//   box-shadow: 0 0 20px rgba(0,0,0,0.2);
+// }
 
 .card-trip > img {
   height:200px;
   width: 100%;
   object-fit: cover;
 }
+.card-trip-show > img {
+height: 50%;
+width: 40%;
+object-fit: cover;
+}
+
 h2 {
   color: whitesmoke
 }
@@ -47,6 +53,7 @@ h2 {
   font-size: 20px;
   font-weight: bold;
   margin: 50;
+  height: 14vh;
 }
 
 .card-trip p {
@@ -73,9 +80,8 @@ h2 {
 
 .heading-date {
   background-color: #d1c45b;
-  // border-radius: 40% 20% / 10% 30%;
   margin: 55px -165px;
-  padding: 0px 0px;
+  padding: 0px;
   text-align: center;
 }
 
@@ -121,4 +127,26 @@ h2 {
     // font-family: "Roboto";
     font-size: 30px;
     font-weight: bold;
+}
+
+.card-trip {
+  overflow: hidden;
+  background: rgb(78, 76, 76);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+
+.resa-infos {
+  border-radius: 5px;
+  border: 1px solid lightgray;
+  min-width: 300px;
+  padding: 20px;
+  box-shadow: 5px 5px slategray;
+}
+
+.resa-container {
+  margin: 0 176px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 16px;
 }
