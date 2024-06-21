@@ -1,7 +1,7 @@
 class Event < ApplicationRecord
   belongs_to :user
   belongs_to :category
-
+  has_one_attached :photo
   # validation, à na ps oublier de mettre hour entre 0 et 24 et minute entre 0 et 60
   #
   #Exemples catégories :
@@ -10,4 +10,3 @@ class Event < ApplicationRecord
   # - festival
   # - braderie, marché
 end
-

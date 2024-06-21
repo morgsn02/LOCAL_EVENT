@@ -7,13 +7,16 @@
 
     <h1>🌟 Trouver <strong> l'evenment idéal </strong> c'est <strong> facile</strong>🌟</h1>
     <p>Chercher votre location pour un evenment pour vos enfants !</p>
-      <div class="button d-flex justify-content-center">
-        <%= link_to new_event_path  do %>
-          <button type="button" class="btn btn-primary mx-2">Créé un evenment</button>
-        <% end %>
+      <div class="button d-flex flex-row justify-content-between">
         <%= link_to events_path  do %>
-          <button type="button" class="btn btn-primary">List des evenments</button>
+          <button type="button" class="btn btn-primary mt-2">List des evenments</button>
         <% end %>
+
+        <div>
+        <%= link_to new_event_path  do %>
+          <button type="button" class="btn btn-primary mt-2">Créé un evenment</button>
+        <% end %>
+
       </div>
     </div>
   </div>

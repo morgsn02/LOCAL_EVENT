@@ -1,38 +1,11 @@
+  <h1>
+      <span data-controller="typed" data-typed-strings-value="<%= ["AJOUTER UN EVENMENT"] %>">
+    AJOUTER UN EVENMENT
+        </span>
+    </h1>
 
+  <div class="form">
+    <%= render "form", event: @event %>
+  </div>
 
-<div class="container d-flex flex-column align-items-stretch">
-  <h1 class="mb-4">AJOUTER UN EVENMENT</h1>
-  <%= simple_form_for @event do |f| %>
-    <div class="d-flex justify-content-start">
-      <%= f.input :title, input_html: { style: 'width: 300px;' } %>
-    </div>
-    <div class="d-flex justify-content-start">
-      <%= f.input :start_day, input_html: { style: 'width: 300px;' } %>
-    </div>
-    <div class="d-flex justify-content-start">
-      <%= f.input :end_day, input_html: { style: 'width: 300px;' } %>
-    </div>
-    <div class="d-flex justify-content-start">
-      <%= f.input :hour, input_html: { style: 'width: 300px;' } %>
-    </div>
-    <div class="d-flex justify-content-start">
-      <%= f.input :address, input_html: { style: 'width: 300px;' } %>
-    </div>
-    <div class="d-flex justify-content-start">
-      <%= f.input :city, input_html: { style: 'width: 300px;' }  %>
-    </div>
-    <div class="d-flex justify-content-start">
-      <%= f.input :cost, input_html: { style: 'width: 300px;' } %>
-    </div>
-    <div class="d-flex justify-content-start">
-      <%= f.input :content, input_html: { style: 'width: 300px;' } %>
-    </div>
-    <div class="d-flex justify-content-start">
-      <%= f.input :link_event, input_html: { style: 'width: 300px;' } %>
-    </div>
-    <div class="d-flex justify-content-start">
-      <%= f.button :submit, class: 'btn btn-secondary' %>
-    </div>
-  <% end %>
-</div>
-<div class="end-page"></div>
+  <div class="end-page" ></div>
