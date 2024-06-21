@@ -16,14 +16,24 @@
 				<div class="frame__tagline"><%= image_tag "Logo_1.png", alt: "LocalEventSpot", width: 60 %>
         </div>
 				<div class="frame__site">
-          <a href="http://127.0.0.1:3000/events">Trouver des évènements &nearr;</a>
+          <a href="http://127.0.0.1:3000/events">Des évènements près de chez vous &nearr;</a>
           </div>
+          <% if user_signed_in? %>
+          <div class="frame__menu">
+        <%= link_to "Log out", destroy_user_session_path, data: {turbo_method: :delete}, class: "dropdown-item" %>
+        </div>
+        <% else %>
 				<div class="frame__menu">
           <a href="http://127.0.0.1:3000/users/sign_in">Login</a>
         </div>
+        <% end %>
 
-        <div class="sidebar">
-          <button type="button" class="btn btn-primary">Hello</button>
+        <div class="sidebarleft">
+          <%= link_to 'Liste des évènements', events_path, class: 'neon-button' %>
+        </div>
+
+        <div class="sidebarright">
+          <%= link_to 'Créer un évènement', new_event_path, class: 'neon-button' %>
         </div>
 
 				<div class="frame__links">
@@ -33,7 +43,8 @@
 				</div>
 				<h2 class="frame__title-main"><span>Local</span> <span>Event</span></h2>
 
-<a href="#">Button</a>
+        <%# <a class="neon1" href="#">Button1</a> %>
+
 
 				<%# <div class="frame__content">
 					<div class="content" id="content-1" data-bg="bg-1">
@@ -88,19 +99,19 @@
 		<script src="js/imagesloaded.pkgd.min.js"></script>
 		<script type="module" src="js/index.js"></script>
 
-      
 
-      <div class="button d-flex flex-row justify-content-between">
+
+      <%# <div class="button d-flex flex-row justify-content-between">
         <%= link_to events_path  do %>
-          <button type="button" class="btn btn-primary mt-2">List des evenments</button>
+          <%# <button type="button" class="btn btn-primary mt-2">List des evenments</button>
         <% end %>
 
-        <div>
+        <%# <div>
         <%= link_to new_event_path  do %>
-          <button type="button" class="btn btn-primary mt-2">Créé un evenment</button>
+          <%# <button type="button" class="btn btn-primary mt-2">Créé un evenment</button>
         <% end %>
 
-      </div>
-    </div>
+      <%# </div>
+    </div> %>
   </div>
 </div>

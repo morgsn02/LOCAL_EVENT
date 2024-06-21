@@ -3,9 +3,10 @@
       <%= f.input :title, placeholder: "maximum 100 characters", input_html: { style: 'width: 500px', maxlength: 100} %>
     </div>
     <div class="d-flex justify-content-start">
-      <%= f.input :start_day, as: :string, input_html: { data: { flatpickr_target: "startDay"} } %>
-      <%= f.input :end_day, as: :string, input_html: { data: { flatpickr_target: "endDay" } } %>
+      <%= f.input :start_day, input_html: { data: { controller: "datepicker"} }, as: :string %>
+      <%= f.input :end_day, input_html: { data: { controller: "datepicker"} }, as: :string %>
     </div>
+
     <div class="d-flex justify-content-start">
       <%= f.input :hour, input_html: { style: 'width: 100px;' } %>
       <%= f.input :minute, input_html: { style: 'width: 100px;' } %>
@@ -15,6 +16,9 @@
     </div>
     <div class="d-flex justify-content-start">
       <%= f.input :city, input_html: { style: 'width: 400px;' }  %>
+    </div>
+    <div class="d-flex justify-content-start">
+      <%= f.association :category, collection: Category.all, label_method: :event_category, value_method: :id, input_html: { style: 'width: 400px;' }  %>
     </div>
     <div class="d-flex justify-content-start">
       <%= f.input :cost, input_html: { style: 'width: 400px;' } %>
@@ -30,3 +34,32 @@
       <%= f.button :submit, class: 'btn btn-primary' %>
     </div>
   <% end %>
+
+
+<%# <div class="container d-flex flex-column align-items-center">
+  <h1 class="mb-4">Ajouter un autre bateau</h1>
+  <%= simple_form_for @boat do |f| %>
+    <%# <div class="d-flex justify-content-center">
+      <%= f.input :name_boat, input_html: { style: 'width: 300px;' } %>
+    <%# </div>
+    <div class="d-flex justify-content-center">
+      <%= f.input :price_per_day, input_html: { style: 'width: 300px;' } %>
+    <%# </div>
+    <div class="d-flex justify-content-center">
+      <%= f.input :construction_year, input_html: { style: 'width: 300px;' } %>
+    <%# </div>
+    <div class="d-flex justify-content-center">
+      <%= f.input :puissance, input_html: { style: 'width: 300px;' } %>
+    <%# </div>
+    <div class="d-flex justify-content-center">
+      <%= f.input :max_person, input_html: { style: 'width: 300px;' } %>
+    <%# </div>
+    <div class="d-flex justify-content-center">
+      <%= f.input :photo, as: :file, input_html: { style: 'width: 300px;' }  %>
+    <%# </div>
+    <div class="d-flex justify-content-center">
+      <%= f.button :submit, class: 'btn btn-secondary' %>
+    <%# </div>
+  <% end %>
+<%# </div>
+<div class="end-page"></div> %>
