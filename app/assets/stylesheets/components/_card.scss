@@ -24,14 +24,15 @@ h1 {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 20px;
-  width: 80 vw;
+  width: 90 vw;
 }
 
-// .card-trip {
-//   overflow: hidden;
-//   background: rgb(80, 79, 79);
-//   box-shadow: 0 0 20px rgba(0,0,0,0.2);
-// }
+.card-trip {
+  border-radius: 20px;
+  overflow: hidden;
+  background: rgb(80, 79, 79);
+  box-shadow: 0 0 20px rgba(0,0,0,0.2);
+}
 
 .card-trip > img {
   height:200px;
@@ -65,9 +66,6 @@ h2 {
 
 .card-trip .card-trip-infos {
   padding: 30px;
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
   position: relative;
 }
 
@@ -77,11 +75,15 @@ h2 {
   top: -20px;
   width: 40px;
 }
+.heading-time-place {
+padding: 0 100px;
+margin-left: -50px;
+}
 
 .heading-date {
   background-color: #d1c45b;
   margin: 55px -165px;
-  padding: 0px;
+  padding: 16px;
   text-align: center;
 }
 
@@ -89,6 +91,8 @@ h2 {
   text-align: center;
   padding: 16px 20px;
   color: whitesmoke;
+  font-weight: 400;
+  font-size: 20vh;
 }
 
 .date-wrap {
@@ -147,7 +151,7 @@ h2 {
 }
 
 .resa-container {
-  margin: 0 176px;
+  margin: 0 178px;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-gap: 16px;
@@ -175,4 +179,10 @@ padding: .65em, 1em, .5em;
 
 .long-description {
   color : whitesmoke;
+}
+
+.description-event {
+  color: whitesmoke;
+  padding: 0, 37px;
+  margin: -7px;
 }

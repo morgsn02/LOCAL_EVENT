@@ -1,5 +1,5 @@
 <div class="dark container">
-  <h1 class="text-center mt-5 mb-4">LOCAL EVENTS</h1>
+  <h1 class="text-center mt-5 mb-4"><strong>LOCAL EVENTS</strong></h1>
 
 <div class="gridcontainer">
 
@@ -20,21 +20,21 @@
           <div class="heading-date">
             <div class="date">
               <p class="date-wrap">
-                <p><strong>Start date: </strong><%= event.start_day %></p>
+                <p><strong>Date de début : </strong><%= event.start_day %></p>
                 <%# <span class="ghost">Du</span> %>
-                <time class="date-time" datetime="2024-06-15">
-                  <span class="date-item is-day">15</span>
-                  <span class="date-item is-month">juin</span>
-                  <p><strong>End date: </strong><%= event.end_day %></p>
+                <%# <time class="date-time" datetime="2024-06-15"> %>
+                  <%# <span class="date-item is-day">15</span>
+                  <span class="date-item is-month">juin</span> %>
                 </time>
-                <span class="material-symbols-outlined">
+                <%# <span class="material-symbols-outlined">
                 arrow_forward_ios
-                </span>
+                </span> %>
+                  <p><strong>Date de fin : </strong><%= event.end_day %></p>
                 <%# <span class="ghost">Au</span> %>
-                <span class="date-icon" aria-hidden="true"></span>
+                <%# <span class="date-icon" aria-hidden="true"></span>
                 <time class="date-time" datetime="2024-08-31">
                   <span class="date-item is-day">31</span>
-                  <span class="date-item is-month">août</span>
+                  <span class="date-item is-month">août</span> %>
                 </time>
               </p>
             </div>
@@ -46,16 +46,18 @@
                 watch_screentime
                 </span>
                 <span class="ghost">A partir de</span>
-                <time datetime="09:30">
-                  09h30
+                <time><%= time = event.hour.to_s + 'h' + event.minute.to_s %>
                 </time>
               </p>
               <p class="time-place-item is-time">
                 <span class="material-symbols-outlined">
                   location_on
                 </span>
-                <span class="ghost">Ville :</span> <p><strong>Location: </strong> <%= event.city.capitalize %></p>
-             <p><strong>Cost: </strong> <%= event.cost %>€</p>
+                <span><strong>Location : </strong> <%= event.city.capitalize %></span>
+                <span class="material-symbols-outlined">
+                  euro_symbol
+                </span>
+              <span><strong>Cost: </strong> <%= event.cost %>€</span>
             </div>
           </div>
       </div>
@@ -64,9 +66,3 @@
 <% end %>
 </div>
 </div>
-
-
-
-  
-                
-       
