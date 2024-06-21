@@ -1,37 +1,72 @@
+<div class="dark container">
+  <h1 class="text-center mt-5 mb-4">LOCAL EVENTS</h1>
+
+<div class="gridcontainer">
 
 
-<h1>
-  <span data-controller="typed" data-typed-strings-value="<%= ["LISTE DES EVENEMENTS"] %>">
-    LISTE DES EVENEMENTS
-  </span>
-</h1>
 
-
-  <div class="card-container">
-      <% @events.each do |event| %>
-        <%= link_to event_path(event) do %>
-
-          <div class="card-trip">
-              <div class="title">
-              <h6 class="p-1 text-center"><%= event.title.upcase %></h6>
-              </div>
-                <% if event.photo.attached? %>
+<% @events.each do |event| %>
+  <%# <%= link_to event_path(event) do %>
+  <div class="mt-4 card-trip">
+    <% if event.photo.attached? %>
                   <%= cl_image_tag event.photo.key, alt: "Le Wagon", width: 200 %>
                 <% else %>
                   <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/greece.jpg" />
                 <% end %>
-              <div class="card-trip-infos">
-
-
-                <div class="p-1 ">
-                  <p><strong>Start date: </strong><%= event.start_day %></p>
+    <div class="card-trip-infos">
+      <div>
+        <h2 class="text-center"><%=event.title.upcase%></h2>
+        <%# <p>Short description here!</p> %>
+          <div class="heading-date">
+            <div class="date">
+              <p class="date-wrap">
+                <p><strong>Start date: </strong><%= event.start_day %></p>
+                <%# <span class="ghost">Du</span> %>
+                <time class="date-time" datetime="2024-06-15">
+                  <span class="date-item is-day">15</span>
+                  <span class="date-item is-month">juin</span>
                   <p><strong>End date: </strong><%= event.end_day %></p>
-                  <p><strong>Location: </strong> <%= event.city.capitalize %></p>
-                  <p><strong>Cost: </strong> <%= event.cost %>€</p>
-                </div>
-              </div>
-
+                </time>
+                <span class="material-symbols-outlined">
+                arrow_forward_ios
+                </span>
+                <%# <span class="ghost">Au</span> %>
+                <span class="date-icon" aria-hidden="true"></span>
+                <time class="date-time" datetime="2024-08-31">
+                  <span class="date-item is-day">31</span>
+                  <span class="date-item is-month">août</span>
+                </time>
+              </p>
+            </div>
           </div>
-        <% end %>
-     <% end %>
+          <div class="heading-time-place">
+            <div class="time-place is-center">
+              <p class="time-place-item is-time">
+                <span class="material-symbols-outlined">
+                watch_screentime
+                </span>
+                <span class="ghost">A partir de</span>
+                <time datetime="09:30">
+                  09h30
+                </time>
+              </p>
+              <p class="time-place-item is-time">
+                <span class="material-symbols-outlined">
+                  location_on
+                </span>
+                <span class="ghost">Ville :</span> <p><strong>Location: </strong> <%= event.city.capitalize %></p>
+             <p><strong>Cost: </strong> <%= event.cost %>€</p>
+            </div>
+          </div>
+      </div>
+    </div>
   </div>
+<% end %>
+</div>
+</div>
+
+
+
+  
+                
+       

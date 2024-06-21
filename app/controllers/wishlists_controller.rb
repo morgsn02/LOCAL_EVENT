@@ -1,42 +1,43 @@
 class WishlistsController < ApplicationController
-  before_action :set_whishlist, only: [:destroy]
+  before_action :set_wishlist, only: [:destroy]
+  before_action :authenticate_user!
 
   def show
   end
 
   def new
-    @whishlist = Whishlist.new
+    @wishlist = Wishlist.new
   end
 
   def create
     @event = Event.find(params[:event_id])
-    @whishlist = Whishlist.new(whislist_params)
-    @whishlist.event = @event
+    @wishlist = Wishlist.new(wishlist_params)
+    @wishlist.event = @event
 
-    @whishlist.user = current_user
-    if @whishlist.save
-      redirect_to whishlist_path(@whishlist)
+    @wishlist.user = current_user
+    if @wishlist.save
+      redirect_to wishlist_path(@wishlist)
     else
       render :new
     end
   end
 
   def destroy
-    @whishlist.destroy
-    redirect_to whishlist_path, status: :see_other
+    @wishlist.destroy
+    redirect_to wishlist_path, status: :see_other
   end
 
-  def my_whishlist
-    @whishlists = Whishlist.where(user_id: current_user.id)
+  def my_wishlist
+    @wishlists = Wishlist.where(user_id: current_user.id)
   end
 
   private
 
-  def whishlist_params
-    params.require(:whislist).permit()
+  def wishlist_params
+    params.require(:wishlist).permit()
   end
 
-  def set_whishlist
-    @whishlist = Whishlist.find(params[:id])
+  def set_wishlist
+    @wishlist = Wishlist.find(params[:id])
   end
 end
