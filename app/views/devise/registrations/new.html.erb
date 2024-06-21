@@ -1,9 +1,74 @@
-<h2>Sign up</h2>
+<div class="all">
+  <div class="wrapper">
+    <form action="#">
+      <h2>SIGN</h2>
+        <div class="input-field">
+          <input type="text" required>
+          <label>Enter your first name</label>
+        </div>
+
+        <div class="input-field">
+          <input type="text" required>
+          <label>Enter your last name</label>
+        </div>
+
+        <div class="input-field">
+          <input type="text" required>
+          <label>Enter your username</label>
+        </div>
+
+        <div class="input-field">
+          <input type="text" required>
+          <label>Choose your favorite event</label>
+        </div>
+
+        <div class="input-field">
+          <input type="text" required>
+          <label>Phone number</label>
+        </div>
+
+        <div class="input-field">
+          <input type="text" required>
+          <label>Enter your email</label>
+        </div>
+
+        <div class="input-field">
+          <input type="password" required>
+          <label>Enter your password</label>
+        </div>
+
+      <button type="submit">CREATE YOUR ACCOUNT</button>
+
+    </form>
+  </div>
+</div>
+<!--<h2>Sign</h2>
 
 <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%= f.error_notification %>
 
+
   <div class="form-inputs">
+    <%= f.input :first_name,
+                required: true,
+                autofocus: true,
+                input_html: { autocomplete: "first name" }%>
+    <%= f.input :last_name,
+                required: true,
+                autofocus: true,
+                input_html: { autocomplete: "last name" }%>
+    <%= f.input :nickname,
+                required: false,
+                autofocus: true,
+                input_html: { autocomplete: "username" }%>
+    <%= f.input :favorite,
+                required: false,
+                autofocus: true,
+                input_html: { autocomplete: "évènements favoris" }%>
+    <%= f.input :phone_number,
+                required: false,
+                autofocus: true,
+                input_html: { autocomplete: "numéro de téléphone" }%>
     <%= f.input :email,
                 required: true,
                 autofocus: true,
@@ -23,3 +88,5 @@
 <% end %>
 
 <%= render "devise/shared/links" %>
+-->
+   
