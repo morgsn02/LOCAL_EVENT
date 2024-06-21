@@ -1,19 +1,105 @@
+<div class="loading">
+		<main>
+			<div class="frame">
+				<%# <div class="frame__title">
+					<h1><a href="https://tympanus.net/codrops/demos/?tag=hover">#Hover</a> <a href="https://tympanus.net/codrops/demos/?tag=grid">#Grid</a> Animations</h1>
+					<span>Want animations like these? <a href="mailto:contact@codrops.com">Hire us</a></span>
+				</div> %>
+				<%# <nav class="frame__works">
+          <button class="btn btn-transparent">Hello</button>
+					<a href="#content-1">Herex Aether</a>
+					<a href="#content-2">Cosmic Silence</a>
+					<a href="#content-3">Mystic Trails</a>
+					<a href="#content-4">Metamorph</a>
+					<a href="#content-5">Prismatica</a>
+				</nav> %>
+				<div class="frame__tagline"><%= image_tag "Logo_1.png", alt: "LocalEventSpot", width: 60 %>
+        </div>
+				<div class="frame__site">
+          <a href="http://127.0.0.1:3000/events">Trouver des évènements &nearr;</a>
+          </div>
+				<div class="frame__menu">
+          <a href="http://127.0.0.1:3000/users/sign_in">Login</a>
+        </div>
 
+        <div class="sidebar">
+          <button type="button" class="btn btn-primary">Hello</button>
+        </div>
 
-<div class="container justify-content-center">
-      <h1>LOCAL EVENTS</h1>
-<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://unsplash.com/photos/people-partying-with-confetti-ZODcBkEohk8);">
-  <div class="container">
+				<div class="frame__links">
+					<a class="frame__back" href="https://tympanus.net/codrops/?p=76613">Blog</a>
+					<a class="frame__archive" href="">Contact</a>
+					<a class="frame__github" href="">Infos sur l'entreprise</a>
+				</div>
+				<h2 class="frame__title-main"><span>Local</span> <span>Event</span></h2>
 
-    <h1>🌟 Trouver <strong> l'evenment idéal </strong> c'est <strong> facile</strong>🌟</h1>
-    <p>Chercher votre location pour un evenment pour vos enfants !</p>
-      <div class="button d-flex justify-content-center">
-        <%= link_to new_event_path  do %>
-          <button type="button" class="btn btn-primary mx-2">Créé un evenment</button>
-        <% end %>
+<a href="#">Button</a>
+
+				<%# <div class="frame__content">
+					<div class="content" id="content-1" data-bg="bg-1">
+						<h2 class="content__title">Herex Aether</h2>
+						<div class="content__img pos-1" data-dir="right"><div class="content__img-inner" style="background-image:url(media/1.jpg)"></div></div>
+						<div class="content__img pos-2" data-dir="left"><div class="content__img-inner" style="background-image:url(media/2.jpg)"></div></div>
+						<div class="content__img pos-3" data-dir="top"><div class="content__img-inner" style="background-image:url(media/3.jpg)"></div></div>
+					</div>
+					<div class="content" id="content-2" data-bg="bg-2">
+						<h2 class="content__title">Cosmic Silence</h2>
+						<div class="content__img pos-4" data-dir="bottom"><div class="content__img-inner" style="background-image:url(media/4.jpg)"></div></div>
+						<div class="content__img pos-5" data-dir="right"><div class="content__img-inner" style="background-image:url(media/5.jpg)"></div></div>
+						<div class="content__img pos-6" data-dir="right"><div class="content__img-inner" style="background-image:url(media/6.jpg)"></div></div>
+					</div>
+					<div class="content" id="content-3" data-bg="bg-3">
+						<h2 class="content__title">Mystic Trails</h2>
+						<div class="content__img pos-7" data-dir="right"><div class="content__img-inner" style="background-image:url(media/7.jpg)"></div></div>
+						<div class="content__img pos-8" data-dir="bottom"><div class="content__img-inner" style="background-image:url(media/8.jpg)"></div></div>
+						<div class="content__img pos-9" data-dir="left"><div class="content__img-inner" style="background-image:url(media/9.jpg)"></div></div>
+					</div>
+					<div class="content" id="content-4" data-bg="bg-4">
+						<h2 class="content__title">Metamorph</h2>
+						<div class="content__img pos-10" data-dir="left"><div class="content__img-inner" style="background-image:url(media/10.jpg)"></div></div>
+						<div class="content__img pos-11" data-dir="right"><div class="content__img-inner" style="background-image:url(media/11.jpg)"></div></div>
+						<div class="content__img pos-12" data-dir="right"><div class="content__img-inner" style="background-image:url(media/12.jpg)"></div></div>
+					</div>
+					<div class="content" id="content-5" data-bg="bg-5">
+						<h2 class="content__title">Prismatica</h2>
+						<div class="content__img pos-13" data-dir="right"><div class="content__img-inner" style="background-image:url(media/13.jpg)"></div></div>
+						<div class="content__img pos-14" data-dir="bottom"><div class="content__img-inner" style="background-image:url(media/14.jpg)"></div></div>
+						<div class="content__img pos-15" data-dir="right"><div class="content__img-inner" style="background-image:url(media/15.jpg)"></div></div>
+					</div>
+				</div>
+			</div> %>
+		</main>
+		<div class="background">
+			<%# <div id="bg-1" class="background__image" style="background-image:url(media/beige1.jpg)"></div>
+			<div id="bg-2" class="background__image" style="background-image:url(media/red1.jpg)"></div>
+			<div id="bg-3" class="background__image" style="background-image:url(media/pink.jpg)"></div>
+			<div id="bg-4" class="background__image" style="background-image:url(media/beige2.jpg)"></div>
+			<div id="bg-5" class="background__image" style="background-image:url(media/red2.jpg)"></div> %>
+
+      <%= video_tag("bg-video.mp4", autoplay: :autoplay, loop: :loop, muted: :muted, :class => 'background__video') %>
+
+		</div>
+			<%# <video autoplay muted loop class="background__video">
+				<source src="bg-video.mp4" type="video/mp4">
+				Your browser does not support the video tag.
+			</video> %>
+		<script src="js/gsap.min.js"></script>
+		<!-- Image preloader -->
+		<script src="js/imagesloaded.pkgd.min.js"></script>
+		<script type="module" src="js/index.js"></script>
+
+      
+
+      <div class="button d-flex flex-row justify-content-between">
         <%= link_to events_path  do %>
-          <button type="button" class="btn btn-primary">List des evenments</button>
+          <button type="button" class="btn btn-primary mt-2">List des evenments</button>
         <% end %>
+
+        <div>
+        <%= link_to new_event_path  do %>
+          <button type="button" class="btn btn-primary mt-2">Créé un evenment</button>
+        <% end %>
+
       </div>
     </div>
   </div>
