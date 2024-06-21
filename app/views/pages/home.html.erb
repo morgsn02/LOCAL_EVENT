@@ -33,7 +33,6 @@
 				</div>
 				<h2 class="frame__title-main"><span>Local</span> <span>Event</span></h2>
 
-
 <a href="#">Button</a>
 
 				<%# <div class="frame__content">
@@ -88,4 +87,20 @@
 		<!-- Image preloader -->
 		<script src="js/imagesloaded.pkgd.min.js"></script>
 		<script type="module" src="js/index.js"></script>
+
+      
+
+      <div class="button d-flex flex-row justify-content-between">
+        <%= link_to events_path  do %>
+          <button type="button" class="btn btn-primary mt-2">List des evenments</button>
+        <% end %>
+
+        <div>
+        <%= link_to new_event_path  do %>
+          <button type="button" class="btn btn-primary mt-2">Créé un evenment</button>
+        <% end %>
+
+      </div>
+    </div>
+  </div>
 </div>

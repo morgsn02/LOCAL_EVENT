@@ -1,4 +1,37 @@
 
-<h1>Events List</h1>
-=======
-<h2>Liste de mes évènements</h2>
+
+<h1>
+  <span data-controller="typed" data-typed-strings-value="<%= ["LISTE DES EVENEMENTS"] %>">
+    LISTE DES EVENEMENTS
+  </span>
+</h1>
+
+
+  <div class="card-container">
+      <% @events.each do |event| %>
+        <%= link_to event_path(event) do %>
+
+          <div class="card-trip">
+              <div class="title">
+              <h6 class="p-1 text-center"><%= event.title.upcase %></h6>
+              </div>
+                <% if event.photo.attached? %>
+                  <%= cl_image_tag event.photo.key, alt: "Le Wagon", width: 200 %>
+                <% else %>
+                  <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/greece.jpg" />
+                <% end %>
+              <div class="card-trip-infos">
+
+
+                <div class="p-1 ">
+                  <p><strong>Start date: </strong><%= event.start_day %></p>
+                  <p><strong>End date: </strong><%= event.end_day %></p>
+                  <p><strong>Location: </strong> <%= event.city.capitalize %></p>
+                  <p><strong>Cost: </strong> <%= event.cost %>€</p>
+                </div>
+              </div>
+
+          </div>
+        <% end %>
+     <% end %>
+  </div>
