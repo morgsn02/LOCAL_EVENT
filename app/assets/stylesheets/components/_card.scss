@@ -133,25 +133,33 @@ margin-left: -50px;
     font-weight: bold;
 }
 
-.card-trip {
+.card {
   overflow: hidden;
-  background: rgb(78, 76, 76);
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  // background: rgb(76, 74, 74);
+  box-shadow: 5px 5px rgb(236, 221, 4);
+  // box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  border: 1px solid lightgray;
+  min-width: 300px;
+  margin-bottom: -2px;
+  // --bs-card-height : 245px;
+
 }
 
 
 .resa-infos {
-  border-radius: 5px;
+  border-radius: 10px;
   border: 1px solid lightgray;
   min-width: 300px;
-  padding: 20px;
+  margin: 0 0 4px 1px;
+  padding: 75px 20px;
   box-shadow: 5px 5px rgb(236, 221, 4);
-  background: rgb(76, 74, 74);
+  background: rgb(78, 74, 74);
   color: whitesmoke;
 }
 
 .resa-container {
-  margin: 0 178px;
+  margin: 45px 178px;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-gap: 16px;
@@ -169,6 +177,7 @@ padding: .65em, 1em, .5em;
   font-size: 1.6rem;
   font-weight: bold;
   background-color:rgb(172, 172, 30);
+  border-radius: 5px;
     color: whitesmoke;
     display: inline-flex;
     line-height: 1;
@@ -177,12 +186,13 @@ padding: .65em, 1em, .5em;
     align-items: center;
 }
 
-.long-description {
-  color : whitesmoke;
-}
-
 .description-event {
   color: whitesmoke;
   padding: 0, 37px;
   margin: -7px;
+}
+
+.end-page-container {
+  margin: auto;
+  padding: 2em;
 }
