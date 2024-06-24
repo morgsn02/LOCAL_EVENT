@@ -13,19 +13,26 @@
 					<a href="#content-4">Metamorph</a>
 					<a href="#content-5">Prismatica</a>
 				</nav> %>
-				<div class="frame__tagline"><%= image_tag "Logo_1.png", alt: "LocalEventSpot", width: 60 %>
-        </div>
-				<div class="frame__site">
-          <a href="http://127.0.0.1:3000/events">Des évènements près de chez vous &nearr;</a>
+
+
+				<%# <div class="frame__tagline">
+          <%= link_to "#home", class: "navbar-brand" do %>
+          <%# <%= image_tag "Logo_1.png", alt: "LocalEventSpot", width: 60 %>
+          <%# <% end %>
+        <%# </div> %>
+
+        <div class="frame__site">
+          <%# <a href="http://127.0.0.1:3000/events">Des évènements près de chez vous &nearr;</a> %>
+          <%= link_to 'Des évènements près de chez vous', events_path %>
           </div>
-          <% if user_signed_in? %>
-          <div class="frame__menu">
+          <%# <% if user_signed_in? %>
+          <%# <div class="frame__menu">
         <%= link_to "Log out", destroy_user_session_path, data: {turbo_method: :delete}, class: "dropdown-item" %>
-        </div>
+        <%# </div>
         <% else %>
-				<div class="frame__menu">
-          <a href="http://127.0.0.1:3000/users/sign_in">Login</a>
-        </div>
+				<%# <div class="frame__menu">
+          <%= link_to "Login", new_user_session_path, class: "nav-link" %>
+        <%# </div>
         <% end %>
 
         <div class="sidebarleft">
