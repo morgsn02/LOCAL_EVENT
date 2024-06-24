@@ -1,8 +1,6 @@
 <div class="dark container">
 
-<h1 class= "text-center">EVENT SHOW</h1>
-
-<p>Find me in app/views/events/show.html.erb</p>
+<h1 class= "text-center"><%= @event.title %></h1>
 
 
           <div class="resa-container">
@@ -14,7 +12,7 @@
             </div>
             <h2 class="card-trip-pricing"></h2>
 
-            <h6 class="p-1 text-center"><"title event"></h6>
+            <h6 class="p-1 text-center"><<%= @event.title %>></h6>
             <div class="card-trip-infos">
               <div>
                 <p>Année de construction:<"booking.boat.construction_year"></p>

@@ -1,9 +1,30 @@
 class EventsController < ApplicationController
-#  before_action :authenticate_user!, except: %i[index show]
+  #before_action :authenticate_user!, except: %i[index show]
   before_action :set_event, only: %i[show edit update destroy]
 
   def index
     @events = Event.all
+    if params[:city].present?
+      @events = @events.where(city: params[:city])
+    end
+
+    if params[:category].present?
+      @events = @events.where(category_id: params[:category])
+    end
+
+    if params[:date].present?
+      @events = @events.where(start_day: params[:date])
+    end
+
+    @markers = @events.geocoded.map do | event |
+      {
+        lat: event.latitude,
+        lng: event.longitude,
+        info_window: render_to_string(partial: "popup", locals: { event: event })
+      }
+
+
+    end
   end
 
   def show
@@ -19,7 +40,6 @@ class EventsController < ApplicationController
     @event.user = current_user
 
     if @event.save!
-      raise
       redirect_to events_path(@event)
     else
       render :new
