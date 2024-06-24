@@ -34,8 +34,12 @@ h1 {
   box-shadow: 0 0 20px rgba(0,0,0,0.2);
 }
 
+.card-trip {
+  margin: -1px;
+}
+
 .card-trip > img {
-  height:200px;
+  height:321px;
   width: 100%;
   object-fit: cover;
 }
@@ -76,8 +80,8 @@ h2 {
   width: 40px;
 }
 .heading-time-place {
-padding: 0 100px;
-margin-left: -50px;
+padding: 0 0 0 100px;
+margin-left: -100px;
 }
 
 .heading-date {
@@ -143,7 +147,6 @@ margin-left: -50px;
   min-width: 300px;
   margin-bottom: -2px;
   // --bs-card-height : 245px;
-
 }
 
 
@@ -162,7 +165,7 @@ margin-left: -50px;
   margin: 45px 178px;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  grid-gap: 16px;
+  grid-gap: 20px;
 }
 
 .category {
@@ -178,12 +181,12 @@ padding: .65em, 1em, .5em;
   font-weight: bold;
   background-color:rgb(172, 172, 30);
   border-radius: 5px;
-    color: whitesmoke;
-    display: inline-flex;
-    line-height: 1;
-    padding: .675em 1em .575em;
-    text-transform: uppercase;
-    align-items: center;
+  color: whitesmoke;
+  display: inline-flex;
+  line-height: 1;
+  padding: .675em 1em .575em;
+  text-transform: uppercase;
+  align-items: center;
 }
 
 .description-event {
@@ -195,4 +198,15 @@ padding: .65em, 1em, .5em;
 .end-page-container {
   margin: auto;
   padding: 2em;
+}
+
+.delete-wishlist {
+  text-decoration: none;
+  color: rgb(84, 76, 76)
+}
+.delete-wishlist:hover {
+  text-decoration: underline;
+  text-underline-offset: 6px;
+  text-decoration-color: orange;
+
 }

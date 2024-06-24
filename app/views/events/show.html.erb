@@ -7,7 +7,7 @@
 
 
           <div class="resa-container">
-            <div class= card>
+            <div class= card-trip>
               <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/greece.jpg">
               <div>
                 <h4 class="category"><%#<%= @event.category %><%= @event.cost %>€</h4>
@@ -71,7 +71,7 @@
 
 <div>
   <div class="wishlist">
-    <%= link_to new_event_wishlist_path(@event) do %>
+    <%= link_to  event_wishlists_path(@event), data: {turbo_method: :post} do %>
       <button type="button" class="btn btn-primary">Ajouter Wishlist</button>
       <% end %>
 

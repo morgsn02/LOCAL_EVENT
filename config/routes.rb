@@ -3,10 +3,10 @@ Rails.application.routes.draw do
 
   get "events/my_events", to: "events#my_events"
   resources :events do
-    resources :wishlist, only: [:create, :new]
+    resources :wishlists, only: [:create, :new]
   end
 
-  resources :wishlist, only: [:destroy]
+  resources :wishlists, only: [:destroy, :index]
 
   root to: "pages#home"
 

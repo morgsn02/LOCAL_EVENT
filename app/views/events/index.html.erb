@@ -3,10 +3,8 @@
 
 <div class="gridcontainer">
 
-
-
 <% @events.each do |event| %>
-  <%# <%= link_to event_path(event) do %>
+  <%= link_to event_path(event) do %>
   <div class="mt-4 card-trip">
     <% if event.photo.attached? %>
                   <%= cl_image_tag event.photo.key, alt: "Le Wagon", width: 200 %>
@@ -15,7 +13,7 @@
                 <% end %>
     <div class="card-trip-infos">
       <div>
-        <h2 class="text-center"><%=event.title.upcase%></h2>
+        <h2 class="text-center"><%= event.title.upcase%></h2>
         <%# <p>Short description here!</p> %>
           <div class="heading-date">
             <div class="date">
@@ -63,7 +61,7 @@
         </div>
       </div>
     </div>
-  <%# <% end %>
+    <% end %>
 <% end %>
 </div>
 </div>
