@@ -13,6 +13,8 @@ Event.destroy_all
 Category.destroy_all
 User.destroy_all
 
+puts "create users"
+
 user1 = User.new(email: "test1@test.com", password: "testtest", first_name: "mohcine", last_name: "chnahim", nickname: "morgsn", favorite: "festival", phone_number: "0600233459")
 user1.save
 
@@ -22,6 +24,7 @@ user2.save
 user3 = User.new(email: "test3@test.com", password: "testtest", first_name: "leanne", last_name: "fraser", nickname: "Ljfraser", favorite: "sport", phone_number: "0623780024")
 user3.save
 
+puts "create category"
 
 category1 = Category.new(event_category: "festival")
 category1.save
@@ -46,7 +49,7 @@ Event.create(
   hour: 18,
   minute: 15,
   address: "Chapelle Saint-Bernardin, 14 Rue du Docteur Rostan 06600",
-  city: "antibes",
+  city: "Antibes",
   cost: 0,
   link_event: "https://www.antibes-juanlespins.com/information/agenda/presentation-33e-festival-dart-sacre",
   content: "Présentation de la 33e édition Festival d'Art sacré d'Antibes Côte d'Azur France par Philippe Depetris, directeur artistique, à la Chapelle Saint Bernardin. Cette présentation est suivie d'un concert gratuit - Inspirations Latines avec Philippe Depetris, flûte, et Pascal Polidori, guitare.",
@@ -191,3 +194,5 @@ Event.create(
   user_id: user3.id,
   category_id: category1.id,
   )
+
+  puts "finished"
