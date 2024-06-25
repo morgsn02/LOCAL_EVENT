@@ -13,9 +13,13 @@
   --color-link-hover: #f4d88c;
   --page-padding: 1.5rem;
   --color-link-works: #fff;
+  --color-link-log-works: #eeae30;
   --color-link-works-hover: #f4d88c;
   --color-link-works-current: #eeae30;
+  --color-link-log-works-hover: #000000;
+  --color-link-log-works-current: #000000;
   --color-title: #fff;
+  --color-log: #fff;
 }
 
 body {
@@ -225,7 +229,7 @@ a:focus-visible {
   flex-direction: column;
   align-items: self-end;
   gap: 0.5rem;
-  color: var(--color-title);
+  color: var(--color-log);
   padding-top: 10px;
 }
 
@@ -249,15 +253,15 @@ a:focus-visible {
   position: relative;
   font-size: 1rem;
   text-decoration: none;
-  color: var(--color-link-works);
+  color: var(--color-link-log-works);
 }
 
 .frame__menu a:hover {
-  color: var(--color-link-works-hover);
+  color: var(--color-link-log-works-hover);
 }
 
 .frame__menu a.current {
-  color: var(--color-link-works-current);
+  color: var(--color-link-log-works-current);
 }
 
 .frame__links {

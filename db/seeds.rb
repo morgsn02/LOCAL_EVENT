@@ -14,31 +14,57 @@ Event.destroy_all
 Category.destroy_all
 User.destroy_all
 
-user1 = User.new(email: "test1@test.com", password: "testtest", first_name: "mohcine", last_name: "chnahim", nickname: "morgsn", favorite: "festival", phone_number: "0600233459")
+puts "create users"
+
+user1 = User.new(email: "test1@test.com", password: "testtest", first_name: "mohcine", last_name: "chnahim", nickname: "morgsn", favorite: "Festival", phone_number: "0600233459")
 user1.save
 
-user2 = User.new(email: "test2@test.com", password: "testtest", first_name: "sonia", last_name: "chavepeyre", nickname: "susiglass", favorite: "braderie, marché", phone_number: "0623789023")
+user2 = User.new(email: "test2@test.com", password: "testtest", first_name: "sonia", last_name: "chavepeyre", nickname: "susiglass", favorite: "Braderie", phone_number: "0623789023")
 user2.save
 
-user3 = User.new(email: "test3@test.com", password: "testtest", first_name: "leanne", last_name: "fraser", nickname: "Ljfraser", favorite: "sport", phone_number: "0623780024")
+user3 = User.new(email: "test3@test.com", password: "testtest", first_name: "leanne", last_name: "fraser", nickname: "Ljfraser", favorite: "Sport", phone_number: "0623780024")
 user3.save
 
+puts "create category"
 
-category1 = Category.new(event_category: "festival")
+category1 = Category.new(event_category: "Association")
 category1.save
 
-category2 = Category.new(event_category: "braderie, marché")
+category2 = Category.new(event_category: "Braderie")
 category2.save
 
-category3 = Category.new(event_category: "sport")
+category3 = Category.new(event_category: "Cinéma")
 category3.save
 
-category4 = Category.new(event_category: "petite enfance et famille")
+category4 = Category.new(event_category: "Conférence")
 category4.save
 
-category5 = Category.new(event_category: "exposition")
+category5 = Category.new(event_category: "Exposition")
 category5.save
 
+category6 = Category.new(event_category: "Festival")
+category6.save
+
+category7 = Category.new(event_category: "Gastronomie")
+category7.save
+
+category8 = Category.new(event_category: "Marché")
+category8.save
+
+category9 = Category.new(event_category: "Nature et Environnement")
+category9.save
+
+category10 = Category.new(event_category: "Petite Enfance et Famille")
+category10.save
+
+category11 = Category.new(event_category: "Sport")
+category11.save
+
+category12 = Category.new(event_category: "Théâtre")
+category12.save
+
+category13 = Category.new(event_category: "Autre")
+category13.save
 
 Event.create(
   title:    "PRÉSENTATION 33E FESTIVAL D'ART SACRÉ",
@@ -47,12 +73,12 @@ Event.create(
   hour: 18,
   minute: 15,
   address: "Chapelle Saint-Bernardin, 14 Rue du Docteur Rostan 06600",
-  city: "antibes",
+  city: "Antibes",
   cost: 0,
   link_event: "https://www.antibes-juanlespins.com/information/agenda/presentation-33e-festival-dart-sacre",
   content: "Présentation de la 33e édition Festival d'Art sacré d'Antibes Côte d'Azur France par Philippe Depetris, directeur artistique, à la Chapelle Saint Bernardin. Cette présentation est suivie d'un concert gratuit - Inspirations Latines avec Philippe Depetris, flûte, et Pascal Polidori, guitare.",
   user_id: user1.id,
-  category_id: category1.id,
+  category_id: category6.id,
   )
 
 Event.create(
@@ -67,7 +93,7 @@ Event.create(
   link_event: "https://www.antibes-juanlespins.com/information/agenda/mondial-footvolley",
   content: "Durant ces 3 jours, les 16 meilleures équipes du monde (Brésil, Paraguay, Israël, Espagne, Italie, Allemagne, Portugal, Autriche, Emirats Arabes Unis, Uruguay, Royaume-Uni, USA, Suisse, Pays-Bas, Argentine et France) sont en lice pour tenter de succéder à l'équipe du Brésil, tenante du titre.",
   user_id: user1.id,
-  category_id: category3.id,
+  category_id: category11.id,
   )
 
 Event.create(
@@ -82,7 +108,7 @@ Event.create(
   link_event: "https://www.lesateliersdemagali.com/",
   content: "Manipuler la terre et l'eau et apprendre des gestes ancestraux... Les ateliers de Magali à Nice : à découvrir absolument ! Des activités manuelles et ludiques pour découvrir la poterie à partir de 3 ans, et apprendre à imaginer et créer de ses mains des objets déco.",
   user_id: user1.id,
-  category_id: category4.id,
+  category_id: category10.id,
   )
 
 Event.create(
@@ -97,7 +123,7 @@ Event.create(
   link_event: "https://recreanice.fr/expo-visite-ateliers-espace-lympia-nice",
   content: "Un parcours passionnant à travers la vie et l'oeuvre d'Hergé qui dévoile des planches de bandes dessinées bien connues et illustrations originales, mais aussi son travail artistique plus large et une partie de sa collection d'art. Et profitez de visites guidées en famille et de nombreux ateliers d'initiation à la bande dessinée, pour tout savoir sur la construction d'une planche de BD.",
   user_id: user1.id,
-  category_id: category5.id,
+  category_id: category10.id,
   )
 
 Event.create(
@@ -107,7 +133,7 @@ Event.create(
   hour: 10,
   minute: 00,
   address: "Médiathèque Albert Camus",
-  city: "antibes",
+  city: "Antibes",
   cost: 0,
   link_event: "https://www.antibes-juanlespins.com/information/agenda/exposition-athletes-extraordinaires-laventure-de-lhandisport-et-du-sport-adapte",
   content: "La Médiathèque Albert Camus accueille du 1er au 29 juin, l'exposition Athlètes extraordinaires l'aventure de l'handisport et du sport adapté.",
@@ -123,12 +149,12 @@ Event.create(
   hour: 18,
   minute: 30,
   address: "895 chemin de saint claude",
-  city: "antibes",
+  city: "Antibes",
   cost: 0,
   link_event: "https://recreanice.fr/festival-ruez-vous-juillet-valbonne-sophia-antipolis-sorties-vacances",
   content: "Venez découvrir des spectacles de rues pour toute la famille : du cirque aérien, acrobatique, burlesque...et un final explosif ! Du Théâtre, de la musique, de la danse, des arts du feu, des clowns, des acrobates, des jongleurs, des marionnettes…",
   user_id: user1.id,
-  category_id: category4.id,
+  category_id: category6.id,
   )
 
 
@@ -159,7 +185,7 @@ Event.create(
   link_event: "https://www.antibes-juanlespins.com/information/agenda/fete-de-la-saint-jean",
   content: "L'ASOA Antibes fête la Saint Jean le samedi 29 juin avec une soirée de fête à la base nautique de la Salis à partir de 18h",
   user_id: user2.id,
-  category_id: category4.id,
+  category_id: category1.id,
   )
 
 
@@ -175,7 +201,7 @@ Event.create(
   link_event: "https://padel-show.fr/",
   content: "Durant 2 soirées festives, les équipes emmenées par le basketteur Tony Parker et le footballeur, champion du monde 98, Robert Pires s'affrontent lors de rencontres qui s'annoncent déjà spectaculaires.",
   user_id: user3.id,
-  category_id: category3.id,
+  category_id: category11.id,
   )
 
 Event.create(
@@ -190,5 +216,7 @@ Event.create(
   link_event: "https://jazzajuan.com/",
   content: "La 63e édition de Jazz à Juan pose un nouveau regard à la frontière entre traditions et influences contemporaines",
   user_id: user3.id,
-  category_id: category1.id,
+  category_id: category6.id,
   )
+
+  puts "finished"
