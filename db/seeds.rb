@@ -15,32 +15,55 @@ User.destroy_all
 
 puts "create users"
 
-user1 = User.new(email: "test1@test.com", password: "testtest", first_name: "mohcine", last_name: "chnahim", nickname: "morgsn", favorite: "festival", phone_number: "0600233459")
+user1 = User.new(email: "test1@test.com", password: "testtest", first_name: "mohcine", last_name: "chnahim", nickname: "morgsn", favorite: "Festival", phone_number: "0600233459")
 user1.save
 
-user2 = User.new(email: "test2@test.com", password: "testtest", first_name: "sonia", last_name: "chavepeyre", nickname: "susiglass", favorite: "braderie, marché", phone_number: "0623789023")
+user2 = User.new(email: "test2@test.com", password: "testtest", first_name: "sonia", last_name: "chavepeyre", nickname: "susiglass", favorite: "Braderie", phone_number: "0623789023")
 user2.save
 
-user3 = User.new(email: "test3@test.com", password: "testtest", first_name: "leanne", last_name: "fraser", nickname: "Ljfraser", favorite: "sport", phone_number: "0623780024")
+user3 = User.new(email: "test3@test.com", password: "testtest", first_name: "leanne", last_name: "fraser", nickname: "Ljfraser", favorite: "Sport", phone_number: "0623780024")
 user3.save
 
 puts "create category"
 
-category1 = Category.new(event_category: "festival")
+category1 = Category.new(event_category: "Association")
 category1.save
 
-category2 = Category.new(event_category: "braderie, marché")
+category2 = Category.new(event_category: "Braderie")
 category2.save
 
-category3 = Category.new(event_category: "sport")
+category3 = Category.new(event_category: "Cinéma")
 category3.save
 
-category4 = Category.new(event_category: "petite enfance et famille")
+category4 = Category.new(event_category: "Conférence")
 category4.save
 
-category5 = Category.new(event_category: "exposition")
+category5 = Category.new(event_category: "Exposition")
 category5.save
 
+category6 = Category.new(event_category: "Festival")
+category6.save
+
+category7 = Category.new(event_category: "Gastronomie")
+category7.save
+
+category8 = Category.new(event_category: "Marché")
+category8.save
+
+category9 = Category.new(event_category: "Nature et Environnement")
+category9.save
+
+category10 = Category.new(event_category: "Petite Enfance et Famille")
+category10.save
+
+category11 = Category.new(event_category: "Sport")
+category11.save
+
+category12 = Category.new(event_category: "Théâtre")
+category12.save
+
+category13 = Category.new(event_category: "Autre")
+category13.save
 
 Event.create(
   title:    "PRÉSENTATION 33E FESTIVAL D'ART SACRÉ",
