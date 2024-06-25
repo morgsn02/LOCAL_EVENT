@@ -40,19 +40,19 @@
       </div>
       </div>
 
-<div class="showbtns">
+<div class="container-showbtns">
 
   <div class="wishlist">
     <%= link_to  event_wishlists_path(@event), data: {turbo_method: :post} do %>
-      <button type="button" class="btn rounded btn-secondary btn-lg">Ajouter Wishlist</button>
+    <button class="button-33" role="button">Ajouter Wishlist</button>
       <% end %>
 
 
     <%= link_to events_path(@event) do %>
-      <button type="button" class="btn rounded btn-secondary btn-lg">Retourner Liste</button>
+        <button class="button-33" role="button">Retourner Liste</button>
       <% end %>
   </div>
-</div>
+  </div>
 
 
           <%# </div>
@@ -66,13 +66,13 @@
 </div> %>
 
 <div class="end-page-container">
-  <h1 class="text-center mt-2">
+  <h2 class="text-center">
     <span data-controller="typed" data-typed-strings-value="<%= [@event.title.downcase.capitalize] %>">
       <%= @event.title.downcase.capitalize %>
     </span>
-  </h1>
+  </h2>
 
-  <div class="description-event mt-1"><p><%= @event.content %></p>
+  <div class="description-event text-center mt-1"><p><%= @event.content %></p>
     <% time = @event.hour.to_s + 'h' + @event.minute.to_s %>
     <p><strong>Start date: </strong><%= @event.start_day.to_s + " " + time %></p>
     <p><strong>Location: </strong><%= @event.address %></p>

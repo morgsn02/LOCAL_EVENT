@@ -1,7 +1,10 @@
 <div class="dark container">
 
-<h1 class="text-center mt-5 mb-4"><strong>LOCAL EVENTS - MAP </strong></h1>
-
+<h1 class="text-center mt-5 mb-4">
+      <span data-controller="typed" data-typed-strings-value="<%= ["AJOUTER UN EVENEMENT"] %>">
+    AJOUTER UN EVENEMENT
+        </span>
+    </h1>
 
   <div class="map" style="width: 100%; height: 400px;"
   data-controller="map"
@@ -9,8 +12,13 @@
   data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
   </div>
 
+<div class= "filter-container">
 
-  <h1 class="text-center mt-5 mb-4">LOCAL EVENTS - FILTER</h1>
+  <h1 class="text-center mt-5 mb-4">
+  <span data-controller="typed" data-typed-strings-value="<%= ["LOCAL EVENTS - FILTER"] %>">
+    LOCAL EVENTS - FILTER
+        </span>
+    </h1>
 <%= form_with url: events_path, method: :get, local: true do |form| %>
 <div class="filters mb-2 mt-5">
     <div>
@@ -30,9 +38,10 @@
     </div>
   </div>
 <% end %>
+</div>
+
 
 <div class="gridcontainer">
-
 
 <% @events.each do |event| %>
   <%= link_to event_path(event) do %>
