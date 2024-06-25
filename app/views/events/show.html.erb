@@ -1,9 +1,16 @@
 <div class="dark container">
 
+
 <h1 class= "text-center"><strong><span data-controller="typed" data-typed-strings-value="<%= [@event.title.downcase.capitalize] %>">
       <%= @event.title.downcase.capitalize %></strong></h1>
 
-<p>Find me in app/views/events/show.html.erb</p>
+<!--
+<h1 class= "text-center">
+  <span data-controller="typed" data-typed-strings-value="<%= [@event.title.downcase.capitalize] %>">
+    <%= @event.title.downcase.capitalize %>
+  </span>
+</h1>
+-->
 
 
           <div class="resa-container">
@@ -15,12 +22,15 @@
             </div>
             <%# <h2 class="card-trip-pricing"></h2>
 
-            <h6 class="p-1 text-center"><"title event"></h6> %>
-            <%# <div class="card-trip-infos">
+
+            <h6 class="p-1 text-center"><<%= @event.title %>></h6>
+            <div class="card-trip-infos">
+
               <div>
-                <p>Année de construction:<"booking.boat.construction_year"></p>
-                <p>Puissance</p>
-                <p>Nombre de personnes: </p>
+                <% time = @event.hour.to_s + 'h' + @event.minute.to_s %>
+                <p><strong>Start date: </strong><%= @event.start_day.to_s + " " + time %></p>
+                <p><strong>Location: </strong><%= @event.address %></p>
+
               </div>
               <h2></h2><h2 class="card-trip-pricing"></h2>
             </div>
@@ -49,6 +59,7 @@
 
           </div>
         </div>
+
       </div>
   </div>
   </div>
@@ -69,7 +80,25 @@
   </div>
 </div>
 
-<div>
+<!-- <div>
+
+          <p class="long-description">
+            <%= @event.content %>
+          </p> 
+
+        </div> -->
+
+  <div><h3>Location of event:</h3></div>
+
+  <div class="mapshow" style="width: 60%; height: 500px;"
+  data-controller="map"
+  data-map-markers-value="<%= @markers.to_json %>"
+  data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
+  </div>
+
+
+<div class="showbtns">
+
   <div class="wishlist">
     <%= link_to  event_wishlists_path(@event), data: {turbo_method: :post} do %>
       <button type="button" class="btn btn-primary">Ajouter Wishlist</button>
@@ -81,3 +110,16 @@
       <% end %>
   </div>
 </div>
+
+
+  </div>
+  </div>
+</div>
+</div>
+
+<div class="end-page"></div>
+
+
+
+
+<div>

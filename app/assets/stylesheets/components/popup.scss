@@ -1,0 +1,44 @@
+.popup {
+
+  p {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 12px;
+    color: rgb(33, 33, 98);
+  }
+
+  h6 {
+    text-align: center;
+    color: rgb(11, 11, 118);
+  }
+}
+
+
+.mapboxgl-popup {
+  max-width: 200px;
+
+}
+
+.mapboxgl-popup-content {
+  background-color: rgb(255, 255, 192);
+  border: 2px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.9);
+}
+
+.btnpopup {
+  display: flex;
+  justify-content: center;
+
+
+  a {
+    border: 0px;
+  }
+}
+
+.map {
+  border: 10px;
+  border-color: aliceblue;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+}
