@@ -78,3 +78,4 @@ group :test do
   gem "selenium-webdriver"
 end
 gem 'ffi', '< 1.17.0'
+gem "cloudinary"
