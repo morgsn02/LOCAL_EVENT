@@ -1,9 +1,34 @@
 <div class="dark container">
-  <h1 class="text-center mt-5 mb-4">LOCAL EVENTS</h1>
+  <h1 class="text-center mt-5 mb-4">LOCAL EVENTS - MAP</h1>
+
+  <div class="map" style="width: 100%; height: 400px;"
+  data-controller="map"
+  data-map-markers-value="<%= @markers.to_json %>"
+  data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
+  </div>
+
+  <h1 class="text-center mt-5 mb-4">LOCAL EVENTS - FILTER</h1>
+<%= form_with url: events_path, method: :get, local: true do |form| %>
+<div class="filters mb-2 mt-5">
+    <div>
+      <%= form.label :city, "City" %>
+      <%= form.select :city, options_for_select(Event.pluck(:city).uniq, params[:city]), include_blank: "Select City" %>
+    </div>
+    <div>
+      <%= form.label :category, "Category" %>
+      <%= form.select :category, options_for_select(Category.pluck(:event_category, :id), params[:category]), include_blank: "Select Category" %>
+    </div>
+    <div>
+      <%= form.label :start_day, "Date" %>
+      <%= form.date_field :date, value: params[:date] %>
+    </div>
+    <div class="submit">
+          <%= form.submit "Filter" %>
+    </div>
+  </div>
+<% end %>
 
 <div class="gridcontainer">
-
-
 
 <% @events.each do |event| %>
   <%# <%= link_to event_path(event) do %>
@@ -64,9 +89,3 @@
 <% end %>
 </div>
 </div>
-
-
-
-  
-                
-       

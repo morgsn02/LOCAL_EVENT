@@ -9,4 +9,6 @@ class Event < ApplicationRecord
   # - sport
   # - festival
   # - braderie, marché
+  geocoded_by :address
+  after_validation :geocode, if: :will_save_change_to_address?
 end
