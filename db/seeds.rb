@@ -9,6 +9,7 @@
 #   end
 #
 
+Wishlist.destroy_all
 Event.destroy_all
 Category.destroy_all
 User.destroy_all
@@ -77,7 +78,7 @@ Event.create(
   link_event: "https://www.antibes-juanlespins.com/information/agenda/presentation-33e-festival-dart-sacre",
   content: "Présentation de la 33e édition Festival d'Art sacré d'Antibes Côte d'Azur France par Philippe Depetris, directeur artistique, à la Chapelle Saint Bernardin. Cette présentation est suivie d'un concert gratuit - Inspirations Latines avec Philippe Depetris, flûte, et Pascal Polidori, guitare.",
   user_id: user1.id,
-  category_id: category1.id,
+  category_id: category6.id,
   )
 
 Event.create(
@@ -92,7 +93,7 @@ Event.create(
   link_event: "https://www.antibes-juanlespins.com/information/agenda/mondial-footvolley",
   content: "Durant ces 3 jours, les 16 meilleures équipes du monde (Brésil, Paraguay, Israël, Espagne, Italie, Allemagne, Portugal, Autriche, Emirats Arabes Unis, Uruguay, Royaume-Uni, USA, Suisse, Pays-Bas, Argentine et France) sont en lice pour tenter de succéder à l'équipe du Brésil, tenante du titre.",
   user_id: user1.id,
-  category_id: category3.id,
+  category_id: category11.id,
   )
 
 Event.create(
@@ -107,7 +108,7 @@ Event.create(
   link_event: "https://www.lesateliersdemagali.com/",
   content: "Manipuler la terre et l'eau et apprendre des gestes ancestraux... Les ateliers de Magali à Nice : à découvrir absolument ! Des activités manuelles et ludiques pour découvrir la poterie à partir de 3 ans, et apprendre à imaginer et créer de ses mains des objets déco.",
   user_id: user1.id,
-  category_id: category4.id,
+  category_id: category10.id,
   )
 
 Event.create(
@@ -122,7 +123,7 @@ Event.create(
   link_event: "https://recreanice.fr/expo-visite-ateliers-espace-lympia-nice",
   content: "Un parcours passionnant à travers la vie et l'oeuvre d'Hergé qui dévoile des planches de bandes dessinées bien connues et illustrations originales, mais aussi son travail artistique plus large et une partie de sa collection d'art. Et profitez de visites guidées en famille et de nombreux ateliers d'initiation à la bande dessinée, pour tout savoir sur la construction d'une planche de BD.",
   user_id: user1.id,
-  category_id: category5.id,
+  category_id: category10.id,
   )
 
 Event.create(
@@ -132,7 +133,7 @@ Event.create(
   hour: 10,
   minute: 00,
   address: "Médiathèque Albert Camus",
-  city: "antibes",
+  city: "Antibes",
   cost: 0,
   link_event: "https://www.antibes-juanlespins.com/information/agenda/exposition-athletes-extraordinaires-laventure-de-lhandisport-et-du-sport-adapte",
   content: "La Médiathèque Albert Camus accueille du 1er au 29 juin, l'exposition Athlètes extraordinaires l'aventure de l'handisport et du sport adapté.",
@@ -148,12 +149,12 @@ Event.create(
   hour: 18,
   minute: 30,
   address: "895 chemin de saint claude",
-  city: "antibes",
+  city: "Antibes",
   cost: 0,
   link_event: "https://recreanice.fr/festival-ruez-vous-juillet-valbonne-sophia-antipolis-sorties-vacances",
   content: "Venez découvrir des spectacles de rues pour toute la famille : du cirque aérien, acrobatique, burlesque...et un final explosif ! Du Théâtre, de la musique, de la danse, des arts du feu, des clowns, des acrobates, des jongleurs, des marionnettes…",
   user_id: user1.id,
-  category_id: category4.id,
+  category_id: category6.id,
   )
 
 
@@ -184,7 +185,7 @@ Event.create(
   link_event: "https://www.antibes-juanlespins.com/information/agenda/fete-de-la-saint-jean",
   content: "L'ASOA Antibes fête la Saint Jean le samedi 29 juin avec une soirée de fête à la base nautique de la Salis à partir de 18h",
   user_id: user2.id,
-  category_id: category4.id,
+  category_id: category1.id,
   )
 
 
@@ -200,7 +201,7 @@ Event.create(
   link_event: "https://padel-show.fr/",
   content: "Durant 2 soirées festives, les équipes emmenées par le basketteur Tony Parker et le footballeur, champion du monde 98, Robert Pires s'affrontent lors de rencontres qui s'annoncent déjà spectaculaires.",
   user_id: user3.id,
-  category_id: category3.id,
+  category_id: category11.id,
   )
 
 Event.create(
@@ -215,7 +216,7 @@ Event.create(
   link_event: "https://jazzajuan.com/",
   content: "La 63e édition de Jazz à Juan pose un nouveau regard à la frontière entre traditions et influences contemporaines",
   user_id: user3.id,
-  category_id: category1.id,
+  category_id: category6.id,
   )
 
   puts "finished"
