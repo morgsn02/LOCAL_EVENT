@@ -16,19 +16,25 @@ class EventsController < ApplicationController
       @events = @events.where(start_day: params[:date])
     end
 
-    @markers = @events.geocoded.map do | event |
+    @markers = @events.geocoded.map do |event|
       {
         lat: event.latitude,
         lng: event.longitude,
         info_window: render_to_string(partial: "popup", locals: { event: event })
       }
-
-
     end
   end
 
   def show
     @event = Event.find(params[:id])
+    @events = Event.where(id: params[:id])
+    @markers = @events.geocoded.map do |event|
+      {
+        lat: event.latitude,
+        lng: event.longitude,
+        info_window: render_to_string(partial: "popup", locals: { event: event })
+      }
+    end
   end
 
   def new
