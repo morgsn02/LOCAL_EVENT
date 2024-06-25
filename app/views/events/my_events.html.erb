@@ -1,1 +1,42 @@
-<h2>Liste de mes évènements</h2>
+<h1 class="text-center mt-5 mb-4"><strong>MY LOCAL EVENTS</strong></h1>
+<div class="resa-container">
+  <% @events.each do |event| %>
+      <div class="card-trip">
+        <%# <% if @event.photo.attached? %>
+          <%# <%= cl_image_tag @event.photo.key, alt: "Le Wagon", width: 200 %>
+        <%# <% else %>
+          <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/greece.jpg" />
+        <%# <% end %>
+      </div>
+
+      <div class="resa-infos">
+          <h4 class="p-1 text-center"><strong><%= event.title%></strong></h4>
+            <div class="pb-2 mt-5"><strong>Date de début : </strong><%= event.start_day %></div>
+            <div class="pb-2"><strong>Date de fin : </strong><%= event.end_day %></div>
+              <span class="material-symbols-outlined">
+                  location_on
+              </span>
+              <span><strong>Location : </strong> <%= event.city.capitalize %></span>
+              <span class="material-symbols-outlined">
+                  watch_screentime
+              </span>
+              <span><strong>Heure : </strong> <%= event.hour.to_s + 'h' + event.minute.to_s %></span>
+
+              <blockquote class="blockquote text-right mt-5">
+              <%= link_to "Modifier cet évènement", edit_event_path(event) %>
+              </blockquote>
+              <blockquote class="blockquote text-right">
+              <%= link_to "Supprimer cet évènement", event_path(event), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}, class:'contient-img-trash' %>
+              </blockquote>
+      </div>
+    <% end %>
+      </div>
+      </div>
+      <div style="display: flex; justify-content: center; align-items: flex-end; height: 100%;">
+
+  <div class="frame__links">
+          <a class="frame__back" href="https://tympanus.net/codrops/?p=76613">Blog</a>
+          <a class="frame__archive" href="">Contact</a>
+          <a class="frame__github" href="">Infos sur l'entreprise</a>
+  </div>
+</div>
