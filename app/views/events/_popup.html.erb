@@ -1,0 +1,11 @@
+<div class="popup">
+  <h6><strong><%= event.title %></strong></h6>
+  <em><p><strong>Location: </strong><%= event.address %></p>
+  <% time = event.hour.to_s + 'h' + event.minute.to_s %>
+  <p><strong>Start date & time: </strong><%= event.start_day.to_s + " @" + time %></p>
+  <p><strong>Location: </strong><%= event.address %></p></em>
+    <div class="btnpopup">
+      <%= link_to event  do %>
+      <button type="button" class="btn btn-primary">See details</button>
+      <% end %>
+    </div>
