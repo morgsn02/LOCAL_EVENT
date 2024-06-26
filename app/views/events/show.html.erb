@@ -3,6 +3,7 @@
 <h1 class= "text-center"><strong><span data-controller="typed" data-typed-strings-value="<%= [@event.title.downcase.capitalize] %>">
       <%= @event.title.downcase.capitalize %></strong></h1>
 
+
 <div class="resa-container">
   <% @events.each do |event| %>
       <div class="card-trip">
@@ -12,6 +13,14 @@
           <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/greece.jpg" />
           <div>
                 <h4 class="category"><%= event.category.event_category %> /   <%= @event.cost%>€</h4>
+
+<!--
+<h1 class= "text-center">
+  <span data-controller="typed" data-typed-strings-value="<%= [@event.title.downcase.capitalize] %>">
+    <%= @event.title.downcase.capitalize %>
+  </span>
+</h1>
+-->
               </div>
         <%# <% end %>
       </div>

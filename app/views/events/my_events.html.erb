@@ -6,11 +6,11 @@
 <div class="resa-container">
   <% @events.each do |event| %>
       <div class="card-trip">
-        <%# <% if @event.photo.attached? %>
-          <%# <%= cl_image_tag @event.photo.key, alt: "Le Wagon", width: 200 %>
-        <%# <% else %>
+        <% if event.photo.attached? %>
+          <%= cl_image_tag event.photo.key, alt: "Le Wagon", width: 200 %>
+        <% else %>
           <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/greece.jpg" />
-        <%# <% end %>
+        <% end %>
       </div>
 
       <div class="resa-infos">
