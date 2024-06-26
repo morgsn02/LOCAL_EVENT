@@ -6,11 +6,11 @@
 <div class="resa-container">
   <% @wishlists.each do |wishlist| %>
       <div class="card-trip">
-        <%# <% if @wishlist.event.photo.attached? %>
-          <%# <%= cl_image_tag @wishlist.event.photo.key, alt: "Le Wagon", width: 200 %>
-        <%# <% else %>
+        <% if wishlist.event.photo.attached? %>
+          <%= cl_image_tag wishlist.event.photo.key, alt: "Le Wagon", width: 200 %>
+       <% else %>
           <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/greece.jpg" />
-        <%# <% end %>
+        <% end %>
       </div>
 
       <div class="resa-infos">
