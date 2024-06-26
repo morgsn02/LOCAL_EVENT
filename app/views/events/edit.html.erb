@@ -1,2 +1,39 @@
 <h1>Events#edit</h1>
 <p>Find me in app/views/events/edit.html.erb</p>
+
+  <%= simple_form_for @event, data: { controller: 'flatpickr' } do |f| %>
+    <div class="d-flex justify-content-start">
+      <%= f.input :title, placeholder: "maximum 100 characters", input_html: { style: 'width: 500px', maxlength: 100} %>
+    </div>
+    <div class="d-flex justify-content-start">
+      <%= f.input :start_day, input_html: { data: { controller: "datepicker"} }, as: :string %>
+      <%= f.input :end_day, input_html: { data: { controller: "datepicker"} }, as: :string %>
+    </div>
+
+    <div class="d-flex justify-content-start">
+      <%= f.input :hour, input_html: { style: 'width: 100px;' } %>
+      <%= f.input :minute, input_html: { style: 'width: 100px;' } %>
+    </div>
+    <div class="d-flex justify-content-start">
+      <%= f.input :address, input_html: { style: 'width: 400px;' } %>
+    </div>
+    <div class="d-flex justify-content-start">
+      <%= f.input :city, input_html: { style: 'width: 400px;' }  %>
+    </div>
+    <div class="d-flex justify-content-start">
+      <%= f.association :category, collection: Category.all, label_method: :event_category, value_method: :id, input_html: { style: 'width: 400px;' }  %>
+    </div>
+    <div class="d-flex justify-content-start">
+      <%= f.input :cost, input_html: { style: 'width: 400px;' } %>
+    </div>
+    <div class="d-flex justify-content-start">
+      <%= f.input :content, input_html: { style: 'width: 300px', style: 'height: 300px', maxlength: 1000 } %>
+    </div>
+    <div class="d-flex justify-content-start">
+      <%= f.input :link_event, input_html: { style: 'width: 400px;' } %>
+    </div>
+    <%= f.input :photo, as: :file, input_html: { style: 'width: 500px;' } %>
+    <div class="d-flex justify-content-start">
+      <%= f.button :submit, class: 'btn btn-primary' %>
+    </div>
+  <% end %>
