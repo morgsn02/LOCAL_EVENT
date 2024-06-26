@@ -7,11 +7,13 @@
 <div class="resa-container">
   <% @events.each do |event| %>
       <div class="card-trip">
-        <%# <% if @event.photo.attached? %>
-          <%# <%= cl_image_tag @event.photo.key, alt: "Le Wagon", width: 200 %>
-        <%# <% else %>
+        <% if event.photo.attached? %>
+          <%= cl_image_tag event.photo.key, alt: "Le Wagon", width: 200 %>
+        <% else %>
           <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/greece.jpg" />
+        <% end %>
           <div>
+
                 <h4 class="category"><%= event.category.event_category %> /   <%= @event.cost%>€</h4>
 
 <!--
@@ -37,13 +39,16 @@
                   watch_screentime
               </span>
               <span><strong>Heure : </strong> <%= event.hour.to_s + 'h' + event.minute.to_s %></span>
-
-              <blockquote class="blockquote text-right mt-5">
-              <%= link_to "Modifier cet évènement", edit_event_path(event) %>
-              </blockquote>
-              <blockquote class="blockquote text-right">
-              <%= link_to "Supprimer cet évènement", event_path(event), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}, class:'contient-img-trash' %>
-              </blockquote>
+              <% if user_signed_in? %>
+                <% if current_user.events.include?(@event) %>
+                <blockquote class="blockquote text-right mt-5">
+                <%= link_to "Modifier cet évènement", edit_event_path(event) %>
+                </blockquote>
+                <blockquote class="blockquote text-right">
+                <%= link_to "Supprimer cet évènement", event_path(event), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}, class:'contient-img-trash' %>
+                </blockquote>
+                <% end %>
+                <% end %>
       </div>
     <% end %>
       </div>
