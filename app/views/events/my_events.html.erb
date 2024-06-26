@@ -1,5 +1,8 @@
-
-<h1 class="text-center mt-5 mb-4"><strong>MY LOCAL EVENTS</strong></h1>
+<h1 class="text-center mt-5 mb-4"><span data-controller="typed" data-typed-strings-value="<%= ["MY LOCAL EVENTS"] %>">
+    MY LOCAL EVENTS
+        </span>
+    </h1>
+    
 <div class="resa-container">
   <% @events.each do |event| %>
       <div class="card-trip">
@@ -33,6 +36,7 @@
     <% end %>
       </div>
       </div>
+
       <div style="display: flex; justify-content: center; align-items: flex-end; height: 100%;">
 
   <div class="frame__links">

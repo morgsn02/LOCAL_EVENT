@@ -1,8 +1,18 @@
 <div class="dark container">
 
-
 <h1 class= "text-center"><strong><span data-controller="typed" data-typed-strings-value="<%= [@event.title.downcase.capitalize] %>">
       <%= @event.title.downcase.capitalize %></strong></h1>
+
+
+<div class="resa-container">
+  <% @events.each do |event| %>
+      <div class="card-trip">
+        <%# <% if @event.photo.attached? %>
+          <%# <%= cl_image_tag @event.photo.key, alt: "Le Wagon", width: 200 %>
+        <%# <% else %>
+          <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/greece.jpg" />
+          <div>
+                <h4 class="category"><%= event.category.event_category %> /   <%= @event.cost%>€</h4>
 
 <!--
 <h1 class= "text-center">
@@ -11,57 +21,50 @@
   </span>
 </h1>
 -->
-
-
-          <div class="resa-container">
-            <div class= card-trip>
-                <% if @event.photo.attached? %>
-                  <%= cl_image_tag @event.photo.key, height: 300, width: 400, crop: :fill %>
-                <% else %>
-                  <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/greece.jpg" />
-                <% end %>
-
-              <div>
-                <h4 class="category"><%#<%= @event.category %><%= @event.cost %>€</h4>
               </div>
+        <%# <% end %>
+      </div>
 
-            <%# <h2 class="card-trip-pricing"></h2>
-
-
-            <h6 class="p-1 text-center"><<%= @event.title ></h6>%>
-            <div class="card-trip-infos">
-
-              <div>
-                <% time = @event.hour.to_s + 'h' + @event.minute.to_s %>
-                <p><strong>Start date: </strong><%= @event.start_day.to_s + " " + time %></p>
-                <p><strong>Location: </strong><%= @event.address %></p>
-
-              </div>
-              <h2></h2><h2 class="card-trip-pricing"></h2>
-            </div>
-          </div>
-
-          <div class="resa-infos">
-            <div class="pb-2"></div>
-              <div>
-              <h5><strong><%= @event.title.downcase.capitalize %></strong></h5>
-              <%# <p><%= @event.content %>
-            </div>
-            <div class="pb-2"><strong>Date de début : </strong><%= @event.start_day %></div>
-            <div class="pb-2"><strong>Date de fin : </strong><%= @event.end_day %></div>
-            <span class="material-symbols-outlined">
+      <div class="resa-infos">
+          <h4 class="p-1 text-center"><strong><%= event.title%></strong></h4>
+            <div class="pb-2 mt-5"><strong>Date de début : </strong><%= event.start_day %></div>
+            <div class="pb-2"><strong>Date de fin : </strong><%= event.end_day %></div>
+              <span class="material-symbols-outlined">
                   location_on
-                </span>
-                <span><strong>Location : </strong> <%= @event.city.capitalize %></span>
-                <span class="material-symbols-outlined">
-                watch_screentime
-                </span>
-                <span><strong>Heure : </strong> <%= @event.hour.to_s + 'h' + @event.minute.to_s %>
+              </span>
+              <span><strong>Location : </strong> <%= event.city.capitalize %></span>
+              <span class="material-symbols-outlined">
+                  watch_screentime
+              </span>
+              <span><strong>Heure : </strong> <%= event.hour.to_s + 'h' + event.minute.to_s %></span>
 
-            <%# <div class="pb-2">Heure</div> %>
-            <%# <div class="pb-2">City :</div> %>
+              <blockquote class="blockquote text-right mt-5">
+              <%= link_to "Modifier cet évènement", edit_event_path(event) %>
+              </blockquote>
+              <blockquote class="blockquote text-right">
+              <%= link_to "Supprimer cet évènement", event_path(event), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}, class:'contient-img-trash' %>
+              </blockquote>
+      </div>
+    <% end %>
+      </div>
+      </div>
 
-          </div>
+<div class="container-showbtns">
+
+  <div class="wishlist">
+    <%= link_to  event_wishlists_path(@event), data: {turbo_method: :post} do %>
+    <button class="button-33" role="button">Ajouter Wishlist</button>
+      <% end %>
+
+
+    <%= link_to events_path(@event) do %>
+        <button class="button-33" role="button">Retourner Liste</button>
+      <% end %>
+  </div>
+  </div>
+
+
+          <%# </div>
           </div>
         </div>
 
@@ -69,16 +72,16 @@
   </div>
   </div>
 </div>
-</div>
+</div> %>
 
 <div class="end-page-container">
-  <h1 class="text-center mt-5">
+  <h2 class="text-center">
     <span data-controller="typed" data-typed-strings-value="<%= [@event.title.downcase.capitalize] %>">
       <%= @event.title.downcase.capitalize %>
     </span>
-  </h1>
+  </h2>
 
-  <div class="description-event mt-1"><p><%= @event.content %></p>
+  <div class="description-event text-center mt-1"><p><%= @event.content %></p>
     <% time = @event.hour.to_s + 'h' + @event.minute.to_s %>
     <p><strong>Start date: </strong><%= @event.start_day.to_s + " " + time %></p>
     <p><strong>Location: </strong><%= @event.address %></p>
@@ -102,19 +105,6 @@
   </div>
 
 
-<div class="showbtns">
-
-  <div class="wishlist">
-    <%= link_to  event_wishlists_path(@event), data: {turbo_method: :post} do %>
-      <button type="button" class="btn btn-primary">Ajouter Wishlist</button>
-      <% end %>
-
-
-    <%= link_to events_path(@event) do %>
-      <button type="button" class="btn btn-secondary">Retourner Liste</button>
-      <% end %>
-  </div>
-</div>
 
 
   </div>
@@ -132,3 +122,4 @@
 					<a class="frame__github" href="">Infos sur l'entreprise</a>
   </div>
 </div>
+<div></div>
