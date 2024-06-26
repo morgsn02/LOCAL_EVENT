@@ -1,5 +1,12 @@
 <div class="dark container">
 
+
+<h1 class="text-center mt-5 mb-4">
+   <span data-controller="typed" data-typed-strings-value="<%= ["LOCAL EVENTS - MAP"] %>">
+LOCAL EVENTS - MAP
+</h1>
+
+
 <h1 class="text-center mt-5 mb-4">
       <span data-controller="typed" data-typed-strings-value="<%= ["AJOUTER UN EVENEMENT"] %>">
     AJOUTER UN EVENEMENT
@@ -14,11 +21,13 @@
 
 <div class= "filter-container">
 
+
   <h1 class="text-center mt-5 mb-4">
   <span data-controller="typed" data-typed-strings-value="<%= ["LOCAL EVENTS - FILTER"] %>">
     LOCAL EVENTS - FILTER
         </span>
     </h1>
+
 <%= form_with url: events_path, method: :get, local: true do |form| %>
 <div class="filters mb-2 mt-5">
     <div>

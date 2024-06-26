@@ -1,8 +1,6 @@
 class EventsController < ApplicationController
 
- before_action :authenticate_user!, except: %i[index show]
-
-
+before_action :authenticate_user!, except: %i[index show]
   before_action :set_event, only: %i[show edit update destroy]
 
   def index
@@ -29,7 +27,6 @@ class EventsController < ApplicationController
   end
 
   def show
-    @event = Event.find(params[:id])
     @events = Event.where(id: params[:id])
     @markers = @events.geocoded.map do |event|
       {
@@ -56,17 +53,18 @@ class EventsController < ApplicationController
   end
 
   def edit
-    #@event = Event.find(params[:id])
   end
 
   def update
-    #@event = Event.find(params[:id])
-    event.update!(event_params)
-    redirect_to events_path(@event)
+    @event = Event.find(params[:id])
+    if @event.update!(event_params)
+      redirect_to events_path(@event), notice: "Event was successfully updated."
+    else
+      render :edit, status: :unprocessable_entity
+    end
   end
 
   def destroy
-    #@event = Event.find(params[:id])
     @event.destroy
     redirect_to events_my_events_path, status: :see_other
   end
