@@ -1,4 +1,4 @@
-<!-- <%= simple_form_for @event, data: { controller: 'flatpickr' } do |f| %>
+  <%= simple_form_for @event, data: { controller: 'flatpickr' } do |f| %>
     <div class="d-flex justify-content-start">
       <%= f.input :title, placeholder: "maximum 100 characters", input_html: { style: 'width: 500px', maxlength: 100} %>
     </div>
@@ -34,65 +34,32 @@
       <%= f.button :submit, class: 'btn btn-primary' %>
     </div>
   <% end %>
--->
 
-<div class="all">
-  <div class="wrapper">
-    <form action="#">
-      <%# <h2>EVENEMENT</h2> %>
-        <div class="input-field">
-          <input type="text" required>
-          <label>TITRE DE L'EVENEMENT</label>
-        </div>
-         <div class="input-field">
-          <input type="text" required>
-          <label>DATE DE DEBUT</label>
-        </div>
-        <div class="input-field">
-          <input type="text" required>
-          <label>DATE DE FIN</label>
-        </div>
-        <div class="input-field">
-          <input type="text" required>
-          <label>HEURE DE DEBUT</label>
-        </div>
-        <div class="input-field">
-          <input type="text" required>
-          <label>ADRESSE DE L'EVENEMENT</label>
-        </div>
-        <label>CATEGORIE DE L'EVENEMENT</label>
-          <select name="pets" id="pet-select">
-            <option value="">--Choisir une option--</option>
-            <option value="dog">ASSOCIATION</option>
-            <option value="cat">BRADERIE</option>
-            <option value="hamster">CINEMA</option>
-            <option value="parrot">CONFERENCE</option>
-            <option value="spider">EXPOSITION</option>
-            <option value="goldfish">FESTIVAL</option>
-            <option value="spider">GASTRONOMIE</option>
-            <option value="goldfish">MARCHE</option>
-            <option value="spider">NATURE ET ENVIRONNEMENT</option>
-            <option value="goldfish">PETITE ENFANCE ET FAMILLE</option>
-            <option value="spider">SPORT</option>
-            <option value="goldfish">THEATRE</option>
-            <option value="spider">AUTRE</option>
-          </select>
-        <div class="input-field">
-          <input type="text" required>
-          <label>PRIX (€)</label>
-        </div>
-        <div class="input-field">
-          <input type="text" required>
-          <label>CONTENU DE L'EVENEMENT</label>
-        </div>
-        <label>CHOISIR PHOTO DE L'EVENEMENT</label>
-        <input type="file" required />
-        <div class="input-field">
-          <input type="text" required>
-          <label>LIEN URL DE L'EVENEMENT</label>
-        </div>
 
-        <a href="http://127.0.0.1:3000/events/" class="button">CREER VOTRE EVENEMENT</a>
-    </form>
-  </div>
-</div>
+<%# <div class="container d-flex flex-column align-items-center">
+  <h1 class="mb-4">Ajouter un autre bateau</h1>
+  <%= simple_form_for @boat do |f| %>
+    <%# <div class="d-flex justify-content-center">
+      <%= f.input :name_boat, input_html: { style: 'width: 300px;' } %>
+    <%# </div>
+    <div class="d-flex justify-content-center">
+      <%= f.input :price_per_day, input_html: { style: 'width: 300px;' } %>
+    <%# </div>
+    <div class="d-flex justify-content-center">
+      <%= f.input :construction_year, input_html: { style: 'width: 300px;' } %>
+    <%# </div>
+    <div class="d-flex justify-content-center">
+      <%= f.input :puissance, input_html: { style: 'width: 300px;' } %>
+    <%# </div>
+    <div class="d-flex justify-content-center">
+      <%= f.input :max_person, input_html: { style: 'width: 300px;' } %>
+    <%# </div>
+    <div class="d-flex justify-content-center">
+      <%= f.input :photo, as: :file, input_html: { style: 'width: 300px;' }  %>
+    <%# </div>
+    <div class="d-flex justify-content-center">
+      <%= f.button :submit, class: 'btn btn-secondary' %>
+    <%# </div>
+  <% end %>
+<%# </div>
+<div class="end-page"></div> %>
