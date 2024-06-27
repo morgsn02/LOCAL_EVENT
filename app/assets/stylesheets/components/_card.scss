@@ -3,21 +3,25 @@
   background-color: black;
 }
 
-  .showbtns {
-    margin-left: 130px;
-    margin-top: 30px;
-  }
+.showbtns {
+  margin-left: 130px;
+  margin-top: 30px;
+}
 
-  h3 {
-    margin-left: 170px;
-  }
+h3 {
+  margin-left: 170px;
+}
 
-h1, h2, h4 {
+h1,
+h2,
+h4 {
   color: whitesmoke;
 }
 
 @supports (-webkit-background-clip: text) {
-  h1, h2 {
+
+  h1,
+  h2 {
     background-image: linear-gradient(90deg, whitesmoke, #f5e105);
     -webkit-text-fill-color: transparent;
     -webkit-background-clip: text;
@@ -26,8 +30,8 @@ h1, h2, h4 {
     font-size: 40px;
     font-weight: bold;
 
-    }
   }
+}
 
 .gridcontainer {
   margin-bottom: auto;
@@ -40,22 +44,38 @@ h1, h2, h4 {
 .card-trip {
   border-radius: 20px;
   overflow: hidden;
-  box-shadow: 0 0 20px rgba(0,0,0,0.2);
+
+  // background: rgb(80, 79, 79);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+.resa-infos {
+  border-radius: 10px;
+  border: 1px solid lightgray;
+  min-width: 300px;
+
+  margin: 0 0 4px 1px;
+  padding: 35px 20px;
+  box-shadow: 5px 5px rgb(236, 221, 4);
+  background: rgb(78, 74, 74);
+  color: whitesmoke;
+
 }
 
 .card-trip {
   margin: -1px;
 }
 
-.card-trip > img {
-  height:321px;
+.card-trip>img {
+  height: 321px;
   width: 100%;
   object-fit: cover;
 }
-.card-trip-show > img {
-height: 50%;
-width: 40%;
-object-fit: cover;
+
+.card-trip-show>img {
+  height: 50%;
+  width: 40%;
+  object-fit: cover;
 }
 
 h2 {
@@ -78,8 +98,8 @@ h2 {
 
 
 .card-trip .card-trip-infos {
-padding: 30px;
-position: relative;
+  padding: 30px;
+  position: relative;
 }
 
 // .card-trip-infos .card-trip-user {
@@ -89,8 +109,8 @@ position: relative;
 //   width: 40px;
 // }
 .heading-time-place {
-padding: 0 0 0 250px;
-margin-left: -100px;
+  padding: 0 0 0 250px;
+  margin-left: -100px;
 }
 
 .heading-date {
@@ -123,7 +143,7 @@ margin-left: -100px;
   text-transform: uppercase;
 }
 
-.is-month{
+.is-month {
   font-size: 1.2rem;
   font-weight: 400;
   font-weight: 400;
@@ -157,19 +177,6 @@ margin-left: -100px;
   // --bs-card-height : 245px;
 }
 
-
-.resa-infos {
-  border-radius: 10px;
-  border: 1px solid lightgray;
-  min-width: 300px;
-
-  margin: 0 0 4px 1px;
-  padding: 35px 20px;
-  box-shadow: 5px 5px rgb(236, 221, 4);
-  background: rgb(78, 74, 74);
-  color: whitesmoke;
-}
-
 .resa-container {
   margin: 45px 178px;
   display: grid;
@@ -182,13 +189,13 @@ margin-left: -100px;
 }
 
 .category {
-padding: .65em, 1em, .5em;
+  padding: .65em, 1em, .5em;
 }
 
 .category {
   font-size: 1.6rem;
   font-weight: bold;
-  background-color:rgb(187, 174, 79);
+  background-color: rgb(187, 174, 79);
   border-radius: 5px;
   color: whitesmoke;
   display: inline-flex;
@@ -220,3 +227,69 @@ padding: .65em, 1em, .5em;
 //   text-decoration-color: orange;
 
 // }
+
+.formpage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  height: 15vh;
+}
+
+/* Centrage du titre */
+.text-center {
+  color: #fff;
+}
+
+/* Style pour le conteneur du formulaire */
+.form-container {
+  width: 100%;
+  max-width: 600px;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.glass-submit-button {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #fff;
+  background: rgba(203, 177, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 20px;
+  /* Pour l'espacement par rapport aux autres éléments */
+}
+
+.glass-submit-button:hover {
+  background: rgba(220, 81, 255, 0.145);
+  transform: translateY(-2px);
+}
+
+.glass-submit-button:active {
+  background: rgb(255, 255, 255);
+  transform: translateY(0);
+}
+
+.background-container {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: url('https://images.unsplash.com/photo-1514525253161-7a46d19cd819?q=80&w=3774&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D') no-repeat center center;
+  background-size: cover;
+  padding: 20px;
+  box-sizing: border-box;
+}
