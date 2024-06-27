@@ -44,6 +44,7 @@ h4 {
 .card-trip {
   border-radius: 20px;
   overflow: hidden;
+
   // background: rgb(80, 79, 79);
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
 }
@@ -58,6 +59,7 @@ h4 {
   box-shadow: 5px 5px rgb(236, 221, 4);
   background: rgb(78, 74, 74);
   color: whitesmoke;
+
 }
 
 .card-trip {
@@ -114,7 +116,6 @@ h2 {
 .heading-date {
   background-color: #d1c45b;
   margin: 55px -165px;
-  padding: 16px;
   text-align: center;
 }
 
@@ -175,9 +176,6 @@ h2 {
   margin-bottom: -2px;
   // --bs-card-height : 245px;
 }
-
-
-
 
 .resa-container {
   margin: 45px 178px;
