@@ -7,6 +7,7 @@
 <div class="resa-container">
 <% @events.each do |event| %>
       <div class="card-trip">
+
         <% if event.photo.attached? %>
           <%= cl_image_tag event.photo.key, alt: "Le Wagon", width: 200 %>
         <% else %>
@@ -82,7 +83,9 @@
 
   <div class="description-event text-center mt-1"><p><%= @event.content %></p>
     <% time = @event.hour.to_s + 'h' + @event.minute.to_s %>
-    <p><strong>Date début : </strong><%= @event.start_day.to_s + " " + time %></p>
+
+    <p><strong>Date début : </strong><%= @event.start_day.to_s +  "  / Heure : " + time %></p>
+
     <p><strong>Localisation : </strong><%= @event.address %></p>
     <%= link_to "Lien pour plus d'informations", @event.link_event, target: '_blank' %>
 
@@ -92,7 +95,9 @@
 
 
 
+
   <h3><strong>Localisation</strong></h3>
+
 
   <div class="mapshow" style="width: 60%; height: 500px;"
   data-controller="map"
