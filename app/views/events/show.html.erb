@@ -5,7 +5,7 @@
 
 
 <div class="resa-container">
-<% @events.each do |event| %>
+    <% @events.each do |event| %>
       <div class="card-trip">
         <% if event.photo.attached? %>
           <%= cl_image_tag event.photo.key, alt: "Le Wagon", width: 200 %>
@@ -13,10 +13,8 @@
           <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/greece.jpg" />
         <% end %>
           <div>
-
-                <h4 class="category"><%= event.category.event_category %> /   <%= @event.cost%>€</h4>
-
-              </div>
+            <h4 class="category"><%= event.category.event_category %> /   <%= @event.cost%>€</h4>
+          </div>
       </div>
 
       <div class="resa-infos">
@@ -32,7 +30,6 @@
               </span>
               <span><strong>Heure : </strong> <%= event.hour.to_s + 'h' + event.minute.to_s %></span>
               <% if user_signed_in? %>
-
 
                 <% if current_user.events.include?(@event) %>
                 <blockquote class="blockquote text-right mt-5">
