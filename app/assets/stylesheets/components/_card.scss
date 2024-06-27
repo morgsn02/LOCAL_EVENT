@@ -1,10 +1,7 @@
 .dark {
   /* forces dark color-scheme */
   background-color: black;
-
-  .map {
-
-  }
+}
 
   .showbtns {
     margin-left: 130px;
@@ -14,8 +11,8 @@
   h3 {
     margin-left: 170px;
   }
-}
-h1, h2 {
+
+h1, h2, h4 {
   color: whitesmoke;
 }
 
@@ -71,7 +68,7 @@ h2 {
   font-size: 20px;
   font-weight: bold;
   margin: 50;
-  height: 14vh;
+  height: 16vh;
 }
 
 .card-trip p {
@@ -82,16 +79,16 @@ h2 {
 
 
 .card-trip .card-trip-infos {
-  padding: 30px;
-  position: relative;
+padding: 30px;
+position: relative;
 }
 
-.card-trip-infos .card-trip-user {
-  position: absolute;
-  right: 16px;
-  top: -20px;
-  width: 40px;
-}
+// .card-trip-infos .card-trip-user {
+//   position: absolute;
+//   right: 16px;
+//   top: -20px;
+//   width: 40px;
+// }
 .heading-time-place {
 padding: 0 0 0 250px;
 margin-left: -100px;
@@ -206,7 +203,8 @@ padding: .65em, 1em, .5em;
 .description-event {
   color: whitesmoke;
   padding: 0, 37px;
-  margin: -7px;
+  margin-right: 230px;
+  margin-left: 230px;
 }
 
 .end-page-container {

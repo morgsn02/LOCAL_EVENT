@@ -5,7 +5,7 @@
 
 
 <div class="resa-container">
-  <% @events.each do |event| %>
+<% @events.each do |event| %>
       <div class="card-trip">
         <% if event.photo.attached? %>
           <%= cl_image_tag event.photo.key, alt: "Le Wagon", width: 200 %>
@@ -16,15 +16,7 @@
 
                 <h4 class="category"><%= event.category.event_category %> /   <%= @event.cost%>€</h4>
 
-<!--
-<h1 class= "text-center">
-  <span data-controller="typed" data-typed-strings-value="<%= [@event.title.downcase.capitalize] %>">
-    <%= @event.title.downcase.capitalize %>
-  </span>
-</h1>
--->
               </div>
-        <%# <% end %>
       </div>
 
       <div class="resa-infos">
@@ -40,6 +32,8 @@
               </span>
               <span><strong>Heure : </strong> <%= event.hour.to_s + 'h' + event.minute.to_s %></span>
               <% if user_signed_in? %>
+
+
                 <% if current_user.events.include?(@event) %>
                 <blockquote class="blockquote text-right mt-5">
                 <%= link_to "Modifier cet évènement", edit_event_path(event) %>
@@ -90,25 +84,22 @@
     <% time = @event.hour.to_s + 'h' + @event.minute.to_s %>
     <p><strong>Start date: </strong><%= @event.start_day.to_s + " " + time %></p>
     <p><strong>Location: </strong><%= @event.address %></p>
+    <%= link_to "Lien pour plus d'informations", @event.link_event, target: '_blank' %>
+
+
   </div>
 </div>
 
-<!-- <div>
 
-          <p class="long-description">
-            <%= @event.content %>
-          </p>
 
-        </div> -->
-
-  <div><h3>Location of event:</h3></div>
+  <h3><strong>Localisation :</strong></h3>
 
   <div class="mapshow" style="width: 60%; height: 500px;"
   data-controller="map"
   data-map-markers-value="<%= @markers.to_json %>"
   data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
 
-     </div>
+  </div>
 
 
 
