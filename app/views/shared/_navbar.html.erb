@@ -1,7 +1,7 @@
 <div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
   <div class="container-fluid">
     <%= link_to root_path, class: "navbar-brand" do %>
-    <%= image_tag "Logo_2.png", alt: "LocalEventSpot", width: 80 %>
+    <%= image_tag "Logo_2-removebg-preview.png", alt: "LocalEventSpot", width: 80 %>
     <% end %>
 
 
@@ -41,10 +41,9 @@
             </a>
             <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
 
-
-              <%= link_to "Mes évènements", events_my_events_path, class: "dropdown-item" %>
-              <%= link_to "Ma wishlist", wishlists_path, class: "dropdown-item" %>
-              <%= link_to 'Liste des évènements', events_path, class: "dropdown-item" %>
+              <%= link_to 'Consulter les évènements', events_path, class: "dropdown-item" %>
+              <%= link_to "Evènements créés", events_my_events_path, class: "dropdown-item" %>
+              <%= link_to "Evènements favoris", wishlists_path, class: "dropdown-item" %>
               <%= link_to 'Créer un évènement', new_event_path, class: "dropdown-item" %>
               <%= link_to "Log out", destroy_user_session_path, data: {turbo_method: :delete}, class: "dropdown-item" %>
             </div>

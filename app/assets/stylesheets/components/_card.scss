@@ -1,7 +1,7 @@
-.dark {
-  /* forces dark color-scheme */
-  background-color: black;
-}
+// .dark {
+//   /* forces dark color-scheme */
+//   // background-color: rgb(255, 255, 255);
+// }
 
 .showbtns {
   margin-left: 130px;
@@ -45,22 +45,23 @@ h4 {
   border-radius: 20px;
   overflow: hidden;
 
-  // background: rgb(80, 79, 79);
+  background: rgb(80, 79, 79);
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
 }
 
 .resa-infos {
-  border-radius: 10px;
+  border-radius: 20px;
   border: 1px solid lightgray;
   min-width: 300px;
-
   margin: 0 0 4px 1px;
   padding: 35px 20px;
-  box-shadow: 5px 5px rgb(236, 221, 4);
-  background: rgb(78, 74, 74);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1),
+    0 6px 20px rgba(0, 0, 0, 0.1),
+    0 1px 3px rgba(0, 0, 0, 0.08);
+  background: linear-gradient(135deg, #4e4a4a, #6d6b6b, #a0a0a0);
   color: whitesmoke;
-
 }
+
 
 .card-trip {
   margin: -1px;
@@ -230,9 +231,8 @@ h2 {
 
 .formpage {
   display: flex;
+  margin-top: -4%;
   flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
   height: 15vh;
 }
 
@@ -292,4 +292,73 @@ h2 {
   background-size: cover;
   padding: 20px;
   box-sizing: border-box;
+}
+
+
+
+.filter-form {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.form-group {
+  flex: 1;
+  min-width: 150px;
+}
+
+.form-group label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.form-control {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.submit {
+  text-align: center;
+  flex-basis: 100%;
+}
+
+.stylish-button {
+  display: inline-block;
+  padding: 12px 24px;
+  font-size: 16px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #ffffff;
+  background: linear-gradient(135deg, #6d5ed5, #8f7cea);
+  border: none;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 10px;
+}
+
+.stylish-button:hover {
+  background: linear-gradient(135deg, #8f7cea, #6d5ed5);
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+}
+
+.stylish-button:active {
+  transform: translateY(2px);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
