@@ -7,6 +7,7 @@
 <div class="resa-container">
 <% @events.each do |event| %>
       <div class="card-trip">
+
         <% if event.photo.attached? %>
           <%= cl_image_tag event.photo.key, alt: "Le Wagon", width: 200 %>
         <% else %>
@@ -21,12 +22,12 @@
 
       <div class="resa-infos">
           <h4 class="p-1 text-center"><strong><%= event.title%></strong></h4>
-            <div class="pb-2 mt-5"><strong>Date de début : </strong><%= event.start_day %></div>
-            <div class="pb-2"><strong>Date de fin : </strong><%= event.end_day %></div>
+            <div class="pb-2 mt-5"><strong>Date début : </strong><%= event.start_day %></div>
+            <div class="pb-2"><strong>Date fin : </strong><%= event.end_day %></div>
               <span class="material-symbols-outlined">
                   location_on
               </span>
-              <span><strong>Location : </strong> <%= event.city.capitalize %></span>
+              <span><strong>Localisation : </strong> <%= event.city.capitalize %></span>
               <span class="material-symbols-outlined">
                   watch_screentime
               </span>
@@ -82,8 +83,8 @@
 
   <div class="description-event text-center mt-1"><p><%= @event.content %></p>
     <% time = @event.hour.to_s + 'h' + @event.minute.to_s %>
-    <p><strong>Start date: </strong><%= @event.start_day.to_s + " " + time %></p>
-    <p><strong>Location: </strong><%= @event.address %></p>
+    <p><strong>Date début : </strong><%= @event.start_day.to_s +  "  / Heure : " + time %></p>
+    <p><strong>Localisation : </strong><%= @event.address %></p>
     <%= link_to "Lien pour plus d'informations", @event.link_event, target: '_blank' %>
 
 
@@ -92,7 +93,7 @@
 
 
 
-  <h3><strong>Localisation :</strong></h3>
+  <h3><strong>Localisation </strong></h3>
 
   <div class="mapshow" style="width: 60%; height: 500px;"
   data-controller="map"
